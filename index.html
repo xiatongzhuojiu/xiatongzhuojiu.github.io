@@ -168,7 +168,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/">笔记7</a>
+      <a class="article-title" href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/">CentOs bash脚本安装+HTML</a>
     </h1>
   
 
@@ -273,7 +273,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E7%89%A9%E7%90%86%E6%9C%BA%E8%BF%9E%E6%8E%A5centos/">笔记4</a>
+      <a class="article-title" href="/2023/12/10/%E7%89%A9%E7%90%86%E6%9C%BA%E8%BF%9E%E6%8E%A5centos/">物理机连接centos</a>
     </h1>
   
 
@@ -343,7 +343,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/flash%E9%92%93%E9%B1%BC/">笔记2</a>
+      <a class="article-title" href="/2023/12/10/flash%E9%92%93%E9%B1%BC/">flash钓鱼</a>
     </h1>
   
 
@@ -362,7 +362,131 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="一-flash页面制作"><a href="#一-flash页面制作" class="headerlink" title="一. flash页面制作"></a>一. flash页面制作</h3><ol>
+<li>在虚拟机上下载PHPstudy<a target="_blank" rel="noopener" href="https://www.xp.cn/">https://www.xp.cn/</a></li>
+<li>将Apache2.4.39启动</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701697977684-629af7e2-5f06-4ce7-8d13-1d1d880d9907.png" alt="img"></p>
+<ol>
+<li>点击网站-&gt;管理-&gt;打开根目录</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701698017271-115353cf-b315-4f58-9ea9-504fb1047d33.png" alt="img"></p>
+<ol>
+<li>删除里面所有的文件，然后创建一个txt后缀的文本文件，然后重命名为html后缀的index文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701698145457-8db74724-7488-49c1-820b-b7722abff50f.png" alt="img"></p>
+<ol>
+<li>在物理机上创建一个同样名字的HTML文件，再用物理机打开vscode</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701242703814-fa5379d5-1015-4289-9201-e127352a8641.png" alt="img"></p>
+<ol>
+<li>点击文件-&gt;打开文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701249884601-dddd9c7f-40c9-4e2a-87eb-b2dbc22de4e9.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701698255692-563ade03-87a6-46a2-8374-239f5c7095aa.png" alt="img"></p>
+<ol>
+<li>选择创建好了的html后缀的文件，然后点击打开，按住shift+!再回车就会出现主体代码</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701250528610-3f9e007a-c789-44c5-8b06-9fc229a01caa.png" alt="img"></p>
+<ol>
+<li>在body部分输入</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./flash.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701699019530-7e249031-e639-4513-9166-b9a22cf7bca1.png" alt="img"></p>
+<ol>
+<li>把刚刚在win10虚拟机中创建的html后缀的文件以记事本方式打开</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701256764522-d9dc980c-5cf8-4ccc-a1fb-e27e9af713a4.png" alt="img"></p>
+<ol>
+<li>把刚刚在vscode里面编辑的代码全选放到虚拟机打开的记事本中并保存</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257377858-610ce9af-b02a-4a33-8817-11d58da08b97.png" alt="img"></p>
+<ol>
+<li>使用一个js脚本，放在phpstudy的根目录下面</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/js/32753101/1701699059161-f7ef7a8f-7a62-4fa3-8764-f57faab29595.js">📎flash.js</a></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257517150-40da6315-c04d-4eca-a6ff-5bff5e230329.png" alt="img"></p>
+<ol>
+<li>打开phpsutdy,点击网站-&gt;管理-&gt;打开网站</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257104962-c5db6f7e-616d-4512-bd2a-e7b429701929.png" alt="img"></p>
+<ol>
+<li>打开之后就会显示出已经成功做好的flash页面</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257675328-58254a46-e6ca-4d01-818d-c590670d89c7.png" alt="img"></p>
+<h3 id="二-flash捆绑木马"><a href="#二-flash捆绑木马" class="headerlink" title="二. flash捆绑木马"></a>二. flash捆绑木马</h3><ol>
+<li>关掉所有的杀毒软件，然后下载好一个木马程序和flash安装包</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/rar/32753101/1701778220095-6cc7bcf4-349c-450a-8cac-5d79161b44de.rar">📎木马.rar</a></p>
+<ol>
+<li>同时选中木马程序和flash安装包，右击，然后选择添加到压缩文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258200200-8652d6be-397d-4065-9d28-a8772764173b.png" alt="img"></p>
+<ol>
+<li>勾选创建自解压格式压缩文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258292065-c75d18f8-e62b-43ec-bfe7-ff4f2c0e7efa.png" alt="img"></p>
+<ol>
+<li>点击高级-&gt;自解压选项</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258341196-70b676d4-5e92-4b83-93bd-e7d699d36688.png" alt="img"></p>
+<ol>
+<li>解压路径设置 C:\windows\temp</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258415770-b0abff9f-be5c-499c-94e8-322225312f64.png" alt="img"></p>
+<ol>
+<li>然后点击设置选项卡，在解压后运行里面输入</li>
+</ol>
+<p>C:\windows\temp\flashcenter_pp_ax_install_cn.exe </p>
+<p>（黄色背景部分对应之前下载好的flash安装包的名字）</p>
+<p>C:\windows\temp\flash.exe</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258524712-fc5f3e77-99bf-43a6-8bcf-088ab7ccda83.png" alt="img"></p>
+<ol>
+<li>点击模式选项卡，选择全部隐藏</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258662803-6b087acd-87b1-4fb2-a402-3cc6602034a4.png" alt="img"></p>
+<ol>
+<li>点击更新选项卡，将更新模式和覆盖模式都选择为第二个</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258732039-f6afe207-716d-4536-bb1e-a9b363100495.png" alt="img"></p>
+<ol>
+<li>点击确定，然后会显示出一个压缩包</li>
+<li>下载一个图标更改程序</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/rar/32753101/1701778220100-cbba1063-a32b-4869-a9f1-521c4184218c.rar">📎更改图标.rar</a></p>
+<ol>
+<li>点击Restorator.exe启动程序</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259200499-893f034b-5038-404e-8df3-93c51ba774d3.png" alt="img"></p>
+<ol>
+<li>将刚刚做好的压缩包和flash安装包拖到资源树中</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259331313-7c90067b-2109-4b43-8d78-037de2cdbb93.png" alt="img"></p>
+<ol>
+<li>删除压缩包的图标，将flash安装包的图标复制到压缩包中git clone</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259414320-5998c659-18b4-4ad1-b87e-f6d3e625aff0.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259443564-3d4782d7-e7d0-4301-a310-9d7c59665e9d.png" alt="img"></p>
+<ol>
+<li>再次点击压缩包的图标，可以发现它变成了flash安装包的图标</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259474971-33a92c45-eeef-4d07-b7cd-8f0c974944fa.png" alt="img"></p>
+<ol>
+<li>点击保存</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259612821-1bc8a54f-0982-434e-8bb7-ff49d96f27fa.png" alt="img"></p>
+<p>16.将改好的压缩包放入phpstudy的根目录中，并将其名字改为flash压缩包的名字</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701260620277-b5c02f4a-9f08-4618-9473-179e12ca3f10.png" alt="img"></p>
+<ol>
+<li>打开浏览器，在地址栏输入127.0.0.1，就可以看到捆绑木马的flash网站做好了</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701260813077-0f742009-228e-480a-bf63-14a0633b3ba9.png" alt="img"></p>
+<ol>
+<li>点击立即升级，下载压缩包并打开，打开之后可以看到木马已经植入电脑</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701260922885-cbc0e881-ff3d-4de9-afc1-12bb17a4cfd5.png" alt="img"></p>
+
       
     </div>
     
@@ -470,7 +594,7 @@
           </li>
         
           <li>
-            <a href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/">笔记7</a>
+            <a href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/">CentOs bash脚本安装+HTML</a>
           </li>
         
           <li>
