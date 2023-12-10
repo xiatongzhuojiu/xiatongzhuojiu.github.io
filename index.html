@@ -302,7 +302,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">笔记6</a>
+      <a class="article-title" href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">网络基础知识+proxifier的设置+wireshark抓包</a>
     </h1>
   
 
@@ -321,7 +321,95 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="一-网络基础知识"><a href="#一-网络基础知识" class="headerlink" title="一. 网络基础知识"></a>一. 网络基础知识</h3><ol>
+<li>以太网适配器：网线接口；Virtualbox：虚拟网络</li>
+<li>以太网4</li>
+</ol>
+<p>​       VMware Network：虚拟机网络以及网关</p>
+<p>​       无线局域网适配器 WLAN：常规ip地址</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783280804-f9385f31-91d8-4d9a-967b-3c31049c97c7.png" alt="img"></p>
+<ol>
+<li><strong>三个私网网段</strong></li>
+</ol>
+<p><strong>A类:10.0.0.0 - 10.255.255.255</strong></p>
+<p><strong>B类:172.16.0.0-173.31.255.255</strong></p>
+<p><strong>C类:192.168.0.0-192.168.255.255</strong></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783385443-042ccad3-5abe-488a-ae35-c564d9b9b94f.png" alt="img"></p>
+<ol>
+<li>公网（外网) 私网(内网）</li>
+<li>127.0.0.1—本地回环地址；0.0.0.0    *指可连接任意IP地址</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701825136989-d9cb02ba-b1d6-4706-9f20-9dcf2ada1183.png" alt="img"></p>
+<ol>
+<li>光猫：将光纤转换为电信号</li>
+<li>ap：路由器，即内网，内网ip任何人都可以用</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783433525-bd2e190a-812a-4124-9670-691f329d60f7.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783446201-e2a14158-dee8-40b7-b161-0ef659373794.png" alt="img"></p>
+<ol>
+<li>要是内网中两个ip一样，有可能两个都能正常上网，也有可能只有一个能上网，也有可能两个都不能上网。理论上是手动设置的静态IP优先。动态路由会变换ip找到最短路径，静态则不变</li>
+</ol>
+<p><img src="/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85.assets/1701783490949-24beef04-3b9d-4562-95cb-18bb9d1fb7ec.png" alt="img"></p>
+<ol>
+<li>pc1不能连pc2，pc3；pc2，pc3可以连pc1</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783570373-cc6bf15c-57fc-488c-86a1-fcd818ce1523.png" alt="img"></p>
+<ol>
+<li>四现象（）源IP，源MAC,目的IP，目的MAC</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783623083-6972dc23-0807-419b-81ed-cc62ce8d13d5.png" alt="img"></p>
+<h3 id="二-Proxifier的设置"><a href="#二-Proxifier的设置" class="headerlink" title="二. Proxifier的设置"></a>二. Proxifier的设置</h3><ol>
+<li>下载并安装 Proxifier</li>
+<li>打开clash代理，找到自己的代理IP和端口号</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701780648417-660407f9-6755-446f-9320-8bd9ff02d209.png" alt="img"></p>
+<ol>
+<li>打开proxifier点击配置文件-&gt;代理服务器-&gt;编辑</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781362256-5dd9b395-98b7-40fc-9586-1ec7686f4425.png" alt="img"></p>
+<ol>
+<li>将端口号改为clash猫上面的端口号，协议选择SOCKS5，点击确定</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781400698-1de2107d-5425-4e3e-b1a4-18dee07086fc.png" alt="img"></p>
+<ol>
+<li>置文件-&gt;代理规则，点击添加</li>
+</ol>
+<p><img src="/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85.assets/1701781416248-d25decd1-7970-4d67-b6e6-c95ff9855940.png" alt="img"></p>
+<ol>
+<li>用程序输入ssh*;（分号为英文输入） ,动作选择第一个，点击确定，给localhost规则移除</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781428770-31ff90c0-cd5c-45f9-90f0-ac9b6617f48f.png" alt="img"></p>
+<ol>
+<li>default选择direct（直接放行）</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781485906-a8637952-cb2e-4291-b883-c589f5ba3c42.png" alt="img"></p>
+<ol>
+<li>配置文件-&gt;名称解析</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781510245-3503e8b7-6911-484a-aeb6-87bcf0b97d52.png" alt="img"></p>
+<ol>
+<li>将设置改为下图所示，这样proxifier就配置好了</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781523337-f9ce8e70-1c64-474e-bf48-e50003534930.png" alt="img"></p>
+<h3 id="三-wireshark的使用"><a href="#三-wireshark的使用" class="headerlink" title="三. wireshark的使用"></a>三. wireshark的使用</h3><ol>
+<li>下载并安装wireshark <a target="_blank" rel="noopener" href="https://www.wireshark.org/">https://www.wireshark.org/</a></li>
+<li>安装时能勾选的东西全部勾选</li>
+<li>双击WLAN，就可以抓获WLAN的包</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781799027-2e5f7d4b-24dc-4e9d-b6c4-cbfec909043a.png" alt="img"></p>
+<ol>
+<li>点击停止</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781903276-7eeda298-8f3d-4bf6-9186-901ec156a7c3.png" alt="img"></p>
+<ol>
+<li>可以搜索tcp、udp、http等协议；【ip.src &#x3D;&#x3D; 源ip   源IP过滤】；【ip.dst &#x3D;&#x3D; 目的IP   目的ip过滤】</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701782033081-06a55d14-66f1-4e01-8ddf-09241b7ba717.png" alt="img"></p>
+<ol>
+<li>抓获ping命令的包，打开cmd输入ping baidu.com，回wireshark搜索icmp</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701782915590-dbd0ad5b-3950-4496-889b-bc1a22d39030.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783080675-79c8e522-f209-4a22-9a40-6cda6533562f.png" alt="img"></p>
+
       
     </div>
     
@@ -337,7 +425,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC/">笔记5</a>
+      <a class="article-title" href="/2023/12/10/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC/">安卓病毒监听</a>
     </h1>
   
 
@@ -356,7 +444,59 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="一-正向shell和反向（反弹shell）"><a href="#一-正向shell和反向（反弹shell）" class="headerlink" title="一. 正向shell和反向（反弹shell）"></a>一. 正向shell和反向（反弹shell）</h3><p>\1. s&#x3D;服务器，c&#x3D;客户端</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701658783381-411a5020-d77d-43bd-82c1-ea8af0947f45.png" alt="img"></p>
+<ol>
+<li>正向shell</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660637050-d71c410c-3e1f-4ba9-8ab1-09a5ca3c476f.png" alt="img"></p>
+<ol>
+<li>反向（反弹）shell</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660673228-839bd74c-4eb0-4457-8597-aef589c847ac.png" alt="img"><img src="/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC.assets/1701660673235-2d522d4f-a299-4c89-804d-71c256a30eb1.png">服务器端口一般是0000 (0000表示不限制任何ip；)，</p>
+<p>正向shell可能会出现bug，会有window或者Linux的防火墙抵御来自sever的监听。</p>
+<p>但是反向shell不会，因为反向shell是客户机c出栈，正向shell是入栈。</p>
+<ol>
+<li>解决防火墙抵御bug的解决方法,直接关闭防火墙或者在防火墙高级设置中允许连接</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660841045-3bf53bc2-b418-4812-9766-42d9d3246b29.png" alt="img"></p>
+<h3 id="二-使用mumu进行病毒监听"><a href="#二-使用mumu进行病毒监听" class="headerlink" title="二. 使用mumu进行病毒监听"></a>二. 使用mumu进行病毒监听</h3><ol>
+<li>在官网上下载mumu模拟器版本，下载mumu6</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://mumu.163.com/index.html">https://mumu.163.com/index.html</a></p>
+<ol>
+<li>安装好AhMyth程序</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774342011-c32f002c-002c-4b6a-8ac6-b695d8f855c3.png" alt="img"></p>
+<ol>
+<li>win+r,输入cmd，输入ipconfig查找自己的ip</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774524388-d4ddda1f-ae25-460e-a00c-cee86acbfb75.png" alt="img"></p>
+<ol>
+<li>打开AhMyth，在Source IP中输入刚刚获取到的ip，端口号默认即可，然后点击Build</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774570641-4bf0d95c-bcf6-4b70-a2df-432ca4cf0b9e.png" alt="img"></p>
+<h3 id="三-java的安装和环境配置"><a href="#三-java的安装和环境配置" class="headerlink" title="三. java的安装和环境配置"></a>三. java的安装和环境配置</h3><ol>
+<li>下载Java安装包</li>
+<li>新建两个文件夹，分别命名为java8和java_jre</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775640674-1ccfaaf8-1113-4623-ada6-f339b5dca481.png" alt="img"></p>
+<ol>
+<li>点击安装，将目录更换到java8文件夹下（由于我是在虚拟机安装没有其它盘，只能装在c盘），然后点击下一步</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775669701-e5cd5370-2332-4f31-a8fd-5dc8f6b9f92a.png" alt="img"></p>
+<ol>
+<li>将目标文件夹的路径更换到java_jre文件夹中，然后下一步</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775713940-4b4601fa-2ff9-4175-bfbc-aedad10ee912.png" alt="img">5.右击此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量，</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701690778669-e54569a8-4e63-447a-b5f0-d8e560198c60.png" alt="img"></p>
+<p>6.找到系统变量的Path变量，双击打开</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776040782-8644d8ac-8f81-4e08-804b-1759245d644f.png" alt="img"></p>
+<ol>
+<li>将新建的两个文件夹的路径加进去，然后确定，这样java环境就配置好了</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776102197-f0412dbd-8006-4cb9-b325-9aafeacd359e.png" alt="img"></p>
+
       
     </div>
     
@@ -391,7 +531,61 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="一-centos基本命令"><a href="#一-centos基本命令" class="headerlink" title="一. centos基本命令"></a>一. centos基本命令</h3><h4 id="1-注释"><a href="#1-注释" class="headerlink" title="1. 注释"></a>1. 注释</h4><p>ls文件目录</p>
+<p>ls &#x2F; 根目录</p>
+<p>ls -a  查看隐藏文件</p>
+<p>隐藏文件    .xxxxxx</p>
+<p>​                   xxxxx</p>
+<p>ls . 当前目录</p>
+<p>ls .. 上级目录</p>
+<p>touch 文件名   创建文件（按ls查看）</p>
+<p>touch  .文件名  创建隐藏文件（按ls -a查看）</p>
+<p>ls -al 显示当前目录下的所有的文件及属性</p>
+<p>mkdir 创建文件夹</p>
+<p>mkdir -p 文件名&#x2F;文件名&#x2F;文件名创建递归文件夹</p>
+<p>cd切换目录</p>
+<p>whoami查看当前用户的名字</p>
+<p>cat 文件名  查看文本文件</p>
+<p>id当前用户的权限</p>
+<p>pwd当前所在的目录</p>
+<p>rm -f 文件名   强制删除</p>
+<p>rm -rf test1&#x2F;  强制删除文件夹下所有的内容</p>
+<p>ls &#x2F;bin |grep mv查找bin目录所有带mv的文件</p>
+<p>ls &#x2F;bin|more</p>
+<p>ls &#x2F;bin|less</p>
+<p>ls &#x2F;bin|grep ls</p>
+<p>cat &#x2F;bin&#x2F;ls</p>
+<p>vi 文件名 编辑文件</p>
+<p>touch anaconda-ks.cfg</p>
+<p>cat -n 文件名  查看文件内容（-n显示行号）</p>
+<p>chmod 755 文件名 修改权限</p>
+<p>echo “123“(想要写的内容) &gt;&gt;test1&#x2F;4 将内容追加到test1目录中的4里面</p>
+<p>find &#x2F;bin -name ls搜索在bin目录下名字为ls的文件</p>
+<p>find &#x2F;bin -user root</p>
+<p>find &#x2F;bin size +204800  搜索bin目录中大小在100M以上的文件</p>
+<p>find &#x2F;bin -iname ls</p>
+<p>useradd admin 创建用户</p>
+<p>passwd admin 修改admin密码（不加用户名，就是修改当前用户密码）</p>
+<p>ip add显示centos的ip地址</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701396334535-a9b04a41-1b77-47b8-89dd-f5122c95ff90.png" alt="img"></p>
+<p>第一列是文件属性</p>
+<h4 id="二-物理机连接centos"><a href="#二-物理机连接centos" class="headerlink" title="二. 物理机连接centos"></a>二. 物理机连接centos</h4><ol>
+<li>systemctl enable sshd</li>
+<li>systemctl start sshd</li>
+<li>vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</li>
+</ol>
+<p> \4. 按esc，输入：set nu显示行号，找到38行去掉#后面没有yes就添加一个yes即可，PermitRootLogin yes</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701586413605-92c5d585-3938-4243-ae08-41ea4f9f563f.png" alt="img"></p>
+<ol>
+<li>systemctl restart sshd</li>
+<li>ip add 查找centos的地址</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701863655129-2d07fa23-bf65-4393-b68a-d482df2c9d9a.png" alt="img"></p>
+<ol>
+<li>ssh <a href="mailto:&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#57;&#x32;&#x2e;&#x31;&#x36;&#56;&#46;&#49;&#53;&#x37;&#x2e;&#49;&#52;&#49;">&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#57;&#x32;&#x2e;&#x31;&#x36;&#56;&#46;&#49;&#53;&#x37;&#x2e;&#49;&#52;&#49;</a></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701863797952-4e0ebcb5-76d4-4cf2-a3f8-c07c7ab8b7ed.png" alt="img"></p>
+
       
     </div>
     
@@ -407,7 +601,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E5%8D%9A%E5%AE%A2%EF%BC%88blog%E6%90%AD%E5%BB%BA%EF%BC%89/">笔记3</a>
+      <a class="article-title" href="/2023/12/10/%E5%8D%9A%E5%AE%A2%EF%BC%88blog%E6%90%AD%E5%BB%BA%EF%BC%89/">博客（blog搭建）</a>
     </h1>
   
 
@@ -426,7 +620,91 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="一-利用github搭建hexo博客"><a href="#一-利用github搭建hexo博客" class="headerlink" title="一. 利用github搭建hexo博客"></a>一. 利用github搭建hexo博客</h3><ol>
+<li><p>下载typora</p>
+</li>
+<li><p>下载picgo    <a target="_blank" rel="noopener" href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p>
+</li>
+<li><p>下载node.js  <a target="_blank" rel="noopener" href="https://nodejs.org/en]">https://nodejs.org/en</a></p>
+</li>
+<li><p>下载git</p>
+</li>
+<li><p>注册一个github账号</p>
+</li>
+<li><p>在本地新建一个文件夹，名为hexo，路径不要有中文（不建议在C盘建立文件夹）</p>
+</li>
+<li><p>选定hexo文件夹，右击-&gt;Git Bash Here</p>
+</li>
+<li><p>使用nmp命令安装hexo,输入：</p>
+</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nmp install -g hexo-cli</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864038301-75223756-0358-4306-a3fa-73fab9d8a595.png" alt="img"></p>
+<ol>
+<li>检测网站雏形，在Git Bash Here中输入以下命令</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>配置ssh</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>如果提示：No such file or directory说明你是第一次使用git</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>连续按三次回车后,打开用户目录,找到.ssh\id_rsa.pub文件,用记事本打开并复制里面的内容,打开你的github主页,进入个人设置-&gt;SSH and GPG keys-&gt;New SSH key:</li>
+<li>在key里面填写刚刚复制的内容</li>
+<li>尝试ssh连接,测试是否成功    ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>(邮箱地址不用改)</li>
+<li>在blog目录下打开cmd</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git-save</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>在上一个Git Bash Here中继续配置</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;asd&quot;//你的github用户名,非昵称</span><br><span class="line">git config --global user.name &quot;xxx@qq.com&quot;//填写你的github注册邮箱</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>在github上新建一个存储库,命名为github的用户名.github.io</li>
+<li>编辑_config.yml文件,在最后面改成这样</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	<span class="built_in">type</span>:git</span><br><span class="line">	repository:git@github.com:asd/asd.github.io.git</span><br><span class="line">	branch:main</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864516988-85820ffd-b961-443f-88bd-c3eab7960ced.png" alt="img"></p>
+<ol>
+<li>Git Bash Here中输入hexo d -g上传</li>
+</ol>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864567294-d081522b-426d-4b61-b823-bf89d37b9537.png" alt="img"></h3><h3 id="二-picgo和typora的连接"><a href="#二-picgo和typora的连接" class="headerlink" title="二. picgo和typora的连接"></a>二. picgo和typora的连接</h3><ol>
+<li>打开typora,选择文件-&gt;偏好设置</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423371632-41787294-abcf-4b8b-91d2-334307e8a083.png" alt="img"></p>
+<ol>
+<li>点击图像,插入图片时选择第三个,然后勾选前四个,上传服务选择PicGo(app),PicGo路径精确定位到PicGo.exe</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423418143-126c33c9-8687-4447-96cd-2954e1ff6838.png" alt="img"></p>
+<ol>
+<li>在github上点击个人主页,选择setting</li>
+<li>找到develoer setting-&gt;Personal access tokens-&gt;Tokens(classic)-&gt;Generate new token-&gt;Generate new token(classic),命名为123,生效时间选择永久,勾选第一个,生产令牌后复制令牌</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864697175-ec59669d-a986-4e48-8585-5351f235dd8e.png" alt="img"></p>
+<ol>
+<li>打开PicGo,点击图床设置-&gt;GitHub,然后编辑</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423796833-9950406b-68e4-4a09-b7e8-50a9daa7b40a.png" alt="img"></p>
+<ol>
+<li>图床配置名为123,仓库名为github用户名&#x2F;仓库名,分支名设为main,Token处填写刚刚复制的令牌,设定存储路径为img&#x2F;,点击确定,然后设为默认图床</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423908277-71582001-1645-4aea-af5e-cd41482b55fa.png" alt="img"></p>
+<ol>
+<li>回到typora,点击验证图片上传选项,会显示验证成功,这样PicGo和typora的连接就建立成功了.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701424133266-dd775176-adb1-480f-a2fb-db0f2ef72ea1.png" alt="img"></p>
+
       
     </div>
     
@@ -705,7 +983,7 @@
           </li>
         
           <li>
-            <a href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">笔记6</a>
+            <a href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">网络基础知识+proxifier的设置+wireshark抓包</a>
           </li>
         
       </ul>

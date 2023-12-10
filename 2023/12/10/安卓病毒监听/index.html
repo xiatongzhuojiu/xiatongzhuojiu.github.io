@@ -5,20 +5,37 @@
   
 
   
-  <title>笔记5 | Hexo</title>
+  <title>安卓病毒监听 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="笔记5">
+  <meta name="description" content="一. 正向shell和反向（反弹shell）\1. s&#x3D;服务器，c&#x3D;客户端   正向shell    反向（反弹）shell  服务器端口一般是0000 (0000表示不限制任何ip；)， 正向shell可能会出现bug，会有window或者Linux的防火墙抵御来自sever的监听。 但是反向shell不会，因为反向shell是客户机c出栈，正向shell是入栈。  解决防火">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安卓病毒监听">
 <meta property="og:url" content="http://example.com/2023/12/10/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一. 正向shell和反向（反弹shell）\1. s&#x3D;服务器，c&#x3D;客户端   正向shell    反向（反弹）shell  服务器端口一般是0000 (0000表示不限制任何ip；)， 正向shell可能会出现bug，会有window或者Linux的防火墙抵御来自sever的监听。 但是反向shell不会，因为反向shell是客户机c出栈，正向shell是入栈。  解决防火">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701658783381-411a5020-d77d-43bd-82c1-ea8af0947f45.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660637050-d71c410c-3e1f-4ba9-8ab1-09a5ca3c476f.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660673228-839bd74c-4eb0-4457-8597-aef589c847ac.png">
+<meta property="og:image" content="http://example.com/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC.assets/1701660673235-2d522d4f-a299-4c89-804d-71c256a30eb1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660841045-3bf53bc2-b418-4812-9766-42d9d3246b29.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774342011-c32f002c-002c-4b6a-8ac6-b695d8f855c3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774524388-d4ddda1f-ae25-460e-a00c-cee86acbfb75.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774570641-4bf0d95c-bcf6-4b70-a2df-432ca4cf0b9e.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775640674-1ccfaaf8-1113-4623-ada6-f339b5dca481.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775669701-e5cd5370-2332-4f31-a8fd-5dc8f6b9f92a.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775713940-4b4601fa-2ff9-4175-bfbc-aedad10ee912.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701690778669-e54569a8-4e63-447a-b5f0-d8e560198c60.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776040782-8644d8ac-8f81-4e08-804b-1759245d644f.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776102197-f0412dbd-8006-4cb9-b325-9aafeacd359e.png">
 <meta property="article:published_time" content="2023-12-10T01:42:57.000Z">
-<meta property="article:modified_time" content="2023-12-10T01:42:57.906Z">
+<meta property="article:modified_time" content="2023-12-10T03:09:25.327Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701658783381-411a5020-d77d-43bd-82c1-ea8af0947f45.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,7 +80,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      笔记5
+      安卓病毒监听
     </h1>
   
 
@@ -86,7 +103,59 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="一-正向shell和反向（反弹shell）"><a href="#一-正向shell和反向（反弹shell）" class="headerlink" title="一. 正向shell和反向（反弹shell）"></a>一. 正向shell和反向（反弹shell）</h3><p>\1. s&#x3D;服务器，c&#x3D;客户端</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701658783381-411a5020-d77d-43bd-82c1-ea8af0947f45.png" alt="img"></p>
+<ol>
+<li>正向shell</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660637050-d71c410c-3e1f-4ba9-8ab1-09a5ca3c476f.png" alt="img"></p>
+<ol>
+<li>反向（反弹）shell</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660673228-839bd74c-4eb0-4457-8597-aef589c847ac.png" alt="img"><img src="/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC.assets/1701660673235-2d522d4f-a299-4c89-804d-71c256a30eb1.png">服务器端口一般是0000 (0000表示不限制任何ip；)，</p>
+<p>正向shell可能会出现bug，会有window或者Linux的防火墙抵御来自sever的监听。</p>
+<p>但是反向shell不会，因为反向shell是客户机c出栈，正向shell是入栈。</p>
+<ol>
+<li>解决防火墙抵御bug的解决方法,直接关闭防火墙或者在防火墙高级设置中允许连接</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660841045-3bf53bc2-b418-4812-9766-42d9d3246b29.png" alt="img"></p>
+<h3 id="二-使用mumu进行病毒监听"><a href="#二-使用mumu进行病毒监听" class="headerlink" title="二. 使用mumu进行病毒监听"></a>二. 使用mumu进行病毒监听</h3><ol>
+<li>在官网上下载mumu模拟器版本，下载mumu6</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://mumu.163.com/index.html">https://mumu.163.com/index.html</a></p>
+<ol>
+<li>安装好AhMyth程序</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774342011-c32f002c-002c-4b6a-8ac6-b695d8f855c3.png" alt="img"></p>
+<ol>
+<li>win+r,输入cmd，输入ipconfig查找自己的ip</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774524388-d4ddda1f-ae25-460e-a00c-cee86acbfb75.png" alt="img"></p>
+<ol>
+<li>打开AhMyth，在Source IP中输入刚刚获取到的ip，端口号默认即可，然后点击Build</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774570641-4bf0d95c-bcf6-4b70-a2df-432ca4cf0b9e.png" alt="img"></p>
+<h3 id="三-java的安装和环境配置"><a href="#三-java的安装和环境配置" class="headerlink" title="三. java的安装和环境配置"></a>三. java的安装和环境配置</h3><ol>
+<li>下载Java安装包</li>
+<li>新建两个文件夹，分别命名为java8和java_jre</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775640674-1ccfaaf8-1113-4623-ada6-f339b5dca481.png" alt="img"></p>
+<ol>
+<li>点击安装，将目录更换到java8文件夹下（由于我是在虚拟机安装没有其它盘，只能装在c盘），然后点击下一步</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775669701-e5cd5370-2332-4f31-a8fd-5dc8f6b9f92a.png" alt="img"></p>
+<ol>
+<li>将目标文件夹的路径更换到java_jre文件夹中，然后下一步</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775713940-4b4601fa-2ff9-4175-bfbc-aedad10ee912.png" alt="img">5.右击此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量，</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701690778669-e54569a8-4e63-447a-b5f0-d8e560198c60.png" alt="img"></p>
+<p>6.找到系统变量的Path变量，双击打开</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776040782-8644d8ac-8f81-4e08-804b-1759245d644f.png" alt="img"></p>
+<ol>
+<li>将新建的两个文件夹的路径加进去，然后确定，这样java环境就配置好了</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776102197-f0412dbd-8006-4cb9-b325-9aafeacd359e.png" alt="img"></p>
+
       
     </div>
     
@@ -104,7 +173,7 @@
         <strong class="article-nav-caption"></strong>
         <div class="article-nav-title">
           
-            笔记6
+            网络基础知识+proxifier的设置+wireshark抓包
           
         </div>
       </a>
@@ -199,7 +268,7 @@ gitment.render('gitmentContainer')
           </li>
         
           <li>
-            <a href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">笔记6</a>
+            <a href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">网络基础知识+proxifier的设置+wireshark抓包</a>
           </li>
         
       </ul>
