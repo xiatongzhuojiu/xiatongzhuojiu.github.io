@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>远程控制 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="一. 简单的钓鱼网站的使用 在虚拟机kail中打开终端，然后输入命令vim &#x2F;etc&#x2F;proxychains.conf    将打开的文件的最后一行改为代理IP和端口号    然后按ESC输入冒号：，再输入wq！保存并退出编辑 在终端上输入proxychains4 git clone https:&#x2F;&#x2F;github.com&#x2F;makdosx&#x2F;mip22 输入cd mip22 输入c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="远程控制">
+<meta property="og:url" content="http://example.com/2023/12/10/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一. 简单的钓鱼网站的使用 在虚拟机kail中打开终端，然后输入命令vim &#x2F;etc&#x2F;proxychains.conf    将打开的文件的最后一行改为代理IP和端口号    然后按ESC输入冒号：，再输入wq！保存并退出编辑 在终端上输入proxychains4 git clone https:&#x2F;&#x2F;github.com&#x2F;makdosx&#x2F;mip22 输入cd mip22 输入c">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527412097-594aa483-8c61-49b9-a137-d3bd6e7865be-170217690547455.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527746184-062da0ae-a54d-4105-a263-308b39404c37-170217690547457.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530491361-6769e2f6-174f-45ad-9336-95226ffd9468-170217690547459.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530559088-7241b0f9-7135-4bc6-b754-4838d0920ce4-170217690547461.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530907368-981c7c6b-45b7-4a19-be91-5682601bb828-170217690547563.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531050646-0f6ad688-b881-4974-a75c-669cd704e8ef-170217690547565.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531481428-8f719548-6ff4-43d0-9890-591f461176e6-170217690547567.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531528339-d4d7c8df-6730-4815-ad6e-080b636ea4ae-170217690547569.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531553130-033bdeb9-b72f-4ea7-ad3a-439fb98fd316-170217690547671.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701691595844-9736d0cf-3531-4cf0-a7ff-75e292c0b445-170217690547673.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701691785996-26857469-00c9-41cd-a7e8-6fa5b9516126-170217690547875.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701692472708-21d68ef1-56be-428b-a8a3-19e4dec55e33-170217690547977.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701692524074-7d283c7c-205d-4a86-9a2c-442c1cee75a7-170217690547979.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170747051-a383fea0-6d8f-473c-9dbf-34fdb4c01492-170217690547981.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170851925-c9a0feb6-b8e1-4e43-8452-bcff8c4dfada-170217690548183.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170918247-c81c08dc-2aff-431c-a08c-b2c1abef7c95-170217690548185.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170994659-9f1fd45b-1731-4b67-a5b9-94640bf72284-170217690548287.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701171049744-1454bc09-aa00-4bdd-b04a-d7dd1a0a44bb-170217690548289.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696354112-b954eabb-0b31-4d42-a3ee-ee704fd98d74-170217690548291.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696397078-43dc3375-9a52-4142-8fd0-1162b31df893-170217690548293.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696424064-af54f4e5-5828-4a54-b9fd-1b5343b9adc9-170217690548295.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696451129-6ae84ca1-6e72-4e84-a334-b7a2cd8934ad-170217690548297.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696467627-368f2bc5-7321-401a-a19d-7440aa3d857e-170217690548299.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696628655-8e59c39a-f661-4d60-ac6f-7d196c6108c2-1702176905482101.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696909209-6b5255ae-b5c9-4dd1-8b36-e3bff58e1bbd-1702176905482103.png">
+<meta property="article:published_time" content="2023-12-10T01:43:18.000Z">
+<meta property="article:modified_time" content="2023-12-10T02:58:06.358Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527412097-594aa483-8c61-49b9-a137-d3bd6e7865be-170217690547455.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-远程控制" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      远程控制
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/10/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/" class="article-date">
+  <time datetime="2023-12-10T01:43:18.000Z" itemprop="datePublished">2023-12-10</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="一-简单的钓鱼网站的使用"><a href="#一-简单的钓鱼网站的使用" class="headerlink" title="一. 简单的钓鱼网站的使用"></a>一. 简单的钓鱼网站的使用</h3><ol>
+<li>在虚拟机kail中打开终端，然后输入命令vim &#x2F;etc&#x2F;proxychains.conf</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527412097-594aa483-8c61-49b9-a137-d3bd6e7865be-170217690547455.png" alt="img"></p>
+<ol>
+<li>将打开的文件的最后一行改为代理IP和端口号</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527746184-062da0ae-a54d-4105-a263-308b39404c37-170217690547457.png" alt="img"></p>
+<ol>
+<li>然后按ESC输入冒号：，再输入wq！保存并退出编辑</li>
+<li>在终端上输入proxychains4 git clone <a target="_blank" rel="noopener" href="https://github.com/makdosx/mip22">https://github.com/makdosx/mip22</a></li>
+<li>输入cd mip22</li>
+<li>输入chmod +x .&#x2F;*</li>
+<li>输入proxychains4 -q bash .&#x2F;mip22.sh，然后会出现以下界面</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530491361-6769e2f6-174f-45ad-9336-95226ffd9468-170217690547459.png" alt="img"></p>
+<ol>
+<li>输入1</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530559088-7241b0f9-7135-4bc6-b754-4838d0920ce4-170217690547461.png" alt="img"></p>
+<ol>
+<li>选择一个钓鱼内容，例如输入66</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530907368-981c7c6b-45b7-4a19-be91-5682601bb828-170217690547563.png" alt="img"></p>
+<ol>
+<li>输入3，等待加载成功</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531050646-0f6ad688-b881-4974-a75c-669cd704e8ef-170217690547565.png" alt="img"></p>
+<ol>
+<li>可以得到三个url，选择https的url，复制用浏览器打开，可以得到一个steam登录的钓鱼页面</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531481428-8f719548-6ff4-43d0-9890-591f461176e6-170217690547567.png" alt="img"></p>
+<ol>
+<li>可以得到登录的账号密码</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531528339-d4d7c8df-6730-4815-ad6e-080b636ea4ae-170217690547569.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531553130-033bdeb9-b72f-4ea7-ad3a-439fb98fd316-170217690547671.png" alt="img"></p>
+<h3 id="二-HTTP动态码的获取"><a href="#二-HTTP动态码的获取" class="headerlink" title="二. HTTP动态码的获取"></a>二. HTTP动态码的获取</h3><ol>
+<li>下载VScode<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li>在VScode的扩展商店里面搜索python，并安装</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701691595844-9736d0cf-3531-4cf0-a7ff-75e292c0b445-170217690547673.png" alt="img"></p>
+<ol>
+<li>在VScode的扩展商店里面搜索code run，安装第一个</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701691785996-26857469-00c9-41cd-a7e8-6fa5b9516126-170217690547875.png" alt="img"></p>
+<ol>
+<li>新建一个python类型的文件，输入代码</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&quot;https://httpbin.org/get&quot;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line"><span class="built_in">print</span>(r.status_code)</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>将输入的python的代码保存在已经安装好的python目录下</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701692472708-21d68ef1-56be-428b-a8a3-19e4dec55e33-170217690547977.png" alt="img"></p>
+<ol>
+<li>在路径栏中输入cmd，打开</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701692524074-7d283c7c-205d-4a86-9a2c-442c1cee75a7-170217690547979.png" alt="img"></p>
+<ol>
+<li>输入python 1.py</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170747051-a383fea0-6d8f-473c-9dbf-34fdb4c01492-170217690547981.png" alt="img"></p>
+<ol>
+<li>出现报错，根据报错信息下载插件，输入pip install requests -i <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a> –trusted-host mirrors.aliyun.com</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170851925-c9a0feb6-b8e1-4e43-8452-bcff8c4dfada-170217690548183.png" alt="img"> </p>
+<ol>
+<li>再次输入python 1.py进行尝试，看是否还缺少插件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170918247-c81c08dc-2aff-431c-a08c-b2c1abef7c95-170217690548185.png" alt="img"></p>
+<ol>
+<li>再次出现报错，根据报错信息安装插件，输入pip install chardet -i <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a> –trusted-host mirrors.aliyun.com</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170994659-9f1fd45b-1731-4b67-a5b9-94640bf72284-170217690548287.png" alt="img"></p>
+<ol>
+<li>再次输入python 1.py进行尝试，可以发现成功获取动态码</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701171049744-1454bc09-aa00-4bdd-b04a-d7dd1a0a44bb-170217690548289.png" alt="img"></p>
+<h3 id="三-大灰狼的使用"><a href="#三-大灰狼的使用" class="headerlink" title="三. 大灰狼的使用"></a>三. 大灰狼的使用</h3><ol>
+<li>关闭物理机和win10虚拟机的防病毒和防火墙，下载大灰狼，运行</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696354112-b954eabb-0b31-4d42-a3ee-ee704fd98d74-170217690548291.png" alt="img"></p>
+<ol>
+<li>点击服务生成</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696397078-43dc3375-9a52-4142-8fd0-1162b31df893-170217690548293.png" alt="img"></p>
+<ol>
+<li>将域名ip改为自己的本机ip，然后点击生成服务</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696424064-af54f4e5-5828-4a54-b9fd-1b5343b9adc9-170217690548295.png" alt="img"></p>
+<ol>
+<li>生成一个后缀为.exe的可执行文件，将文件拖入win10虚拟机中，在win10虚拟机上双击执行，然后就可以用大灰狼对虚拟机进行远程操作了。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696451129-6ae84ca1-6e72-4e84-a334-b7a2cd8934ad-170217690548297.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696467627-368f2bc5-7321-401a-a19d-7440aa3d857e-170217690548299.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696628655-8e59c39a-f661-4d60-ac6f-7d196c6108c2-1702176905482101.png" alt="img"></p>
+<ol>
+<li>右击已连接的虚拟机，可以对win10虚拟机进行远程控制，键盘记录等</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696909209-6b5255ae-b5c9-4dd1-8b36-e3bff58e1bbd-1702176905482103.png" alt="img"></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/10/%E7%AC%94%E8%AE%B09/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            笔记9
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">CentOs bash脚本安装+HTML</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        一路烟霞
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/10/%E7%AC%94%E8%AE%B010/">笔记10</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/%E7%AC%94%E8%AE%B09/">笔记9</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/">远程控制</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/">CentOs bash脚本安装+HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">笔记6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2023 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
