@@ -95,11 +95,11 @@
 <p>b. <a target="_blank" rel="noopener" href="https://unpkg.com/vue@2/dist/vue.js">https://unpkg.com/vue@2/dist/vue.js</a></p>
 <p>c. <a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/index.js">https://unpkg.com/element-ui/lib/index.js</a></p>
 <p>3.<a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/index.js">https://unpkg.com/element-ui/lib/index.js</a></p>
-<p><img src="/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782810414-f099849d-6cbc-4637-bfa2-0a07acca9b7b.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702782810414-f099849d-6cbc-4637-bfa2-0a07acca9b7b.png" alt="img"></p>
 <ol>
 <li>右击index.php,在文件管理器中显示，复制上图四个文件，粘贴到虚拟机win10hei的PHPstudy的根目录下，ctrl+s保存，在phpstudy中打开网站，出现按钮。</li>
 </ol>
-<p><img src="/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782827520-44310496-e52f-4df4-82b3-bbd72ca0a6e4.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702782827520-44310496-e52f-4df4-82b3-bbd72ca0a6e4.png" alt="img"></p>
 <h3 id="二-制作网站"><a href="#二-制作网站" class="headerlink" title="二. 制作网站"></a>二. 制作网站</h3>
       
     </div>
@@ -135,8 +135,7 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>一. </p>
-<h2 id="一-引入Element按钮，Container布局容器，菜单侧边栏"><a href="#一-引入Element按钮，Container布局容器，菜单侧边栏" class="headerlink" title="一.引入Element按钮，Container布局容器，菜单侧边栏"></a>一.引入Element按钮，Container布局容器，菜单侧边栏</h2><ol>
+        <h2 id="一-引入Element按钮，Container布局容器，菜单侧边栏"><a href="#一-引入Element按钮，Container布局容器，菜单侧边栏" class="headerlink" title="一.引入Element按钮，Container布局容器，菜单侧边栏"></a>一.引入Element按钮，Container布局容器，菜单侧边栏</h2><ol>
 <li>访问Element官网。</li>
 </ol>
 <p>链接：<a target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/component/button.html">https://element-plus.org/zh-CN/component/button.html</a> </p>
@@ -146,13 +145,13 @@
 <ol>
 <li>发现红色按钮位置是在正中间，是错误的。后来经过老师的提示，要把main.js文件中下列居中代码删掉。import ‘.&#x2F;assets&#x2F;main.css’</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477935327-f9d694eb-44fc-46d6-8140-63ab3670947e.png#averageHue=%23fcfcfc&clientId=u686843c6-6f86-4&from=paste&height=207&id=u7a1049b3&originHeight=207&originWidth=344&originalType=binary&ratio=1&rotation=0&showTitle=false&size=285576&status=done&style=none&taskId=u2bfece8f-e5a7-4fcb-86ab-f58ffb97c88&title=&width=344" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702477935327-f9d694eb-44fc-46d6-8140-63ab3670947e.png" alt="img"></p>
 <ol>
-<li>找到要用到的布局，先查看它的代码，再复制到app.vue。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477982134-682e8b51-64a8-4a95-9d30-9f950184080b.png#averageHue=%23ebf0f9&clientId=u686843c6-6f86-4&from=paste&height=226&id=u20136b70&originHeight=226&originWidth=418&originalType=binary&ratio=1&rotation=0&showTitle=false&size=378794&status=done&style=none&taskId=ueafe1824-6a5e-49e8-8984-f8bcd9f2299&title=&width=418" alt="img"></li>
+<li>找到要用到的布局，先查看它的代码，再复制到app.vue。<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702477982134-682e8b51-64a8-4a95-9d30-9f950184080b.png" alt="img"></li>
 </ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;common-layout&quot;&gt;</span><br><span class="line">    &lt;el-container&gt;</span><br><span class="line">      &lt;el-aside width=&quot;200px&quot;&gt;Aside&lt;/el-aside&gt;</span><br><span class="line">      &lt;el-container&gt;</span><br><span class="line">        &lt;el-header&gt;Header&lt;/el-header&gt;</span><br><span class="line">        &lt;el-main&gt;Main&lt;/el-main&gt;</span><br><span class="line">      &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
 
-<p>5.找到要用到的菜单侧边栏，先查看它的代码，再复制到app.vue。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478014643-2c19b422-9987-4c66-a26b-05ed460f4661.png#averageHue=%23bcbc98&clientId=u686843c6-6f86-4&from=paste&height=331&id=u69e286d0&originHeight=331&originWidth=454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=602477&status=done&style=none&taskId=u81bd321d-ddcc-48a1-abee-65082b0d39d&title=&width=454" alt="img"></p>
+<p>5.找到要用到的菜单侧边栏，先查看它的代码，再复制到app.vue。<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702478014643-2c19b422-9987-4c66-a26b-05ed460f4661.png" alt="img"></p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-row class=&quot;tac&quot;&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">      &lt;h5 class=&quot;mb-2&quot;&gt;Default colors&lt;/h5&gt;</span><br><span class="line">      &lt;el-menu</span><br><span class="line">        default-active=&quot;2&quot;</span><br><span class="line">        class=&quot;el-menu-vertical-demo&quot;</span><br><span class="line">        @open=&quot;handleOpen&quot;</span><br><span class="line">        @close=&quot;handleClose&quot;</span><br><span class="line">      &gt;</span><br><span class="line">       </span><br><span class="line">        &lt;el-menu-item index=&quot;2&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;icon-menu /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Two&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;3&quot; disabled&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;document /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Three&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;4&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;setting /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Four&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">      &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-col&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">      &lt;h5 class=&quot;mb-2&quot;&gt;Custom colors&lt;/h5&gt;</span><br><span class="line">      &lt;el-menu</span><br><span class="line">        active-text-color=&quot;#ffd04b&quot;</span><br><span class="line">        background-color=&quot;#545c64&quot;</span><br><span class="line">        class=&quot;el-menu-vertical-demo&quot;</span><br><span class="line">        default-active=&quot;2&quot;</span><br><span class="line">        text-color=&quot;#fff&quot;</span><br><span class="line">        @open=&quot;handleOpen&quot;</span><br><span class="line">        @close=&quot;handleClose&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;el-sub-menu index=&quot;1&quot;&gt;</span><br><span class="line">          &lt;template #title&gt;</span><br><span class="line">            &lt;el-icon&gt;&lt;location /&gt;&lt;/el-icon&gt;</span><br><span class="line">            &lt;span&gt;Navigator One&lt;/span&gt;</span><br><span class="line">          &lt;/template&gt;</span><br><span class="line">          &lt;el-menu-item-group title=&quot;Group One&quot;&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-1&quot;&gt;item one&lt;/el-menu-item&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-2&quot;&gt;item two&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-menu-item-group&gt;</span><br><span class="line">          &lt;el-menu-item-group title=&quot;Group Two&quot;&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-3&quot;&gt;item three&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-menu-item-group&gt;</span><br><span class="line">          &lt;el-sub-menu index=&quot;1-4&quot;&gt;</span><br><span class="line">            &lt;template #title&gt;item four&lt;/template&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-4-1&quot;&gt;item one&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;2&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;icon-menu /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Two&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;3&quot; disabled&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;document /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Three&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;4&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;setting /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Four&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">      &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-col&gt;</span><br><span class="line">  &lt;/el-row&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span><br><span class="line">import &#123;</span><br><span class="line">  Document,</span><br><span class="line">  Menu as IconMenu,</span><br><span class="line">  Location,</span><br><span class="line">  Setting,</span><br><span class="line">&#125; from &#x27;@element-plus/icons-vue&#x27;</span><br><span class="line">const handleOpen = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">const handleClose = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
 
 
@@ -163,31 +162,34 @@
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const handleOpen = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">const handleClose = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <ol>
-<li>把span&#x3D;12改成span&#x3D;24，侧边栏span&#x3D;24表示占满 el-col :span&#x3D;”24”表示竖直方向占满<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298169039-6bf73205-5c61-4b50-b56b-518fa680bfea.png#averageHue=%23232221&clientId=uc4d5c055-4805-4&from=paste&height=281&id=u8c61a322&originHeight=281&originWidth=497&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20001&status=done&style=none&taskId=u2b7d4666-a4bc-4b3f-89fa-b58fef5d380&title=&width=497" alt="img"></li>
-<li>在侧边栏导入图标，复制代码在对应的用户管理，权限管理，商品管理，订单管理语句各自的前一行。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478133938-4a3a0f16-2685-47d7-b5fc-2fa4e3f3f26c.png#averageHue=%23fefefe&clientId=u686843c6-6f86-4&from=paste&height=355&id=u035a8ae0&originHeight=355&originWidth=625&originalType=binary&ratio=1&rotation=0&showTitle=false&size=889370&status=done&style=none&taskId=u2566e7ca-593a-4425-b6be-c8667a1be0d&title=&width=625" alt="img"><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298662954-37b0eb22-a73f-4b8f-badd-6a21f1a55a4b.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=333&id=u40d34559&originHeight=364&originWidth=581&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29637&status=done&style=none&taskId=u91f17d98-dc0b-494f-915e-424c2eae517&title=&width=532" alt="img"></li>
+<li><p>把span&#x3D;12改成span&#x3D;24，侧边栏span&#x3D;24表示占满 el-col :span&#x3D;”24”表示竖直方向占满<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702298169039-6bf73205-5c61-4b50-b56b-518fa680bfea.png" alt="img"></p>
+</li>
+<li><p>在侧边栏导入图标，复制代码在对应的用户管理，权限管理，商品管理，订单管理语句各自的前一行。</p>
+<p><strong><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702478133938-4a3a0f16-2685-47d7-b5fc-2fa4e3f3f26c.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702298662954-37b0eb22-a73f-4b8f-badd-6a21f1a55a4b.png" alt="img"></strong></p>
+</li>
 </ol>
 <h2 id="二-在el-header设置阴影，圆角边框"><a href="#二-在el-header设置阴影，圆角边框" class="headerlink" title="二.在el-header设置阴影，圆角边框"></a>二.在el-header设置阴影，圆角边框</h2><ol>
-<li>在el-header中创建styled-box1类。（在style创建styled-box1样式）<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299037715-c342f095-d463-419a-98bf-1b325dcfdd94.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=114&id=udeab474a&originHeight=114&originWidth=364&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5367&status=done&style=none&taskId=u5c456bbd-ab73-4e77-908f-be0e33acb74&title=&width=364" alt="img"> </li>
-<li>CTRL+S保存，在终端输入npm run dev, 结果如下图<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299408016-718c337f-2f6d-4c53-8f5f-db3ee347fe6f.png#averageHue=%23f0efee&clientId=uc4d5c055-4805-4&from=paste&height=109&id=ue2ca1ccb&originHeight=109&originWidth=1146&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14217&status=done&style=none&taskId=u01b9a51e-c2a4-4e0b-b481-6f4f80d0065&title=&width=1146" alt="img"></li>
+<li>在el-header中创建styled-box1类。（在style创建styled-box1样式）<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702299037715-c342f095-d463-419a-98bf-1b325dcfdd94.png" alt="img"> </li>
+<li>CTRL+S保存，在终端输入npm run dev, 结果如下图<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702299408016-718c337f-2f6d-4c53-8f5f-db3ee347fe6f.png" alt="img"></li>
 <li>引入搜索框input和搜索，添加用户两个按钮，注意el-row是行，el-col是列。</li>
 </ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">            &lt;el-col :span=&quot;4&quot;</span><br><span class="line">              &gt;&lt;el-input v-model=&quot;input&quot; placeholder=&quot;请输入搜索内容&quot;</span><br><span class="line">            /&gt;&lt;/el-col&gt;</span><br><span class="line">            &lt;el-col :span=&quot;2&quot;&gt;&lt;el-button type=&quot;success&quot;&gt;搜索&lt;/el-button&gt;&lt;/el-col&gt;</span><br><span class="line">            &lt;el-col :span=&quot;2&quot;&gt;   &lt;el-button type=&quot;success&quot;&gt;添加用户&lt;/el-button&gt;&lt;/el-col&gt;</span><br><span class="line">          &lt;/el-row&gt;</span><br></pre></td></tr></table></figure></div>
 
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702300021651-558624ba-d852-43da-aa59-4fad9e072223.png#averageHue=%23f6f6f5&clientId=uc4d5c055-4805-4&from=paste&height=84&id=u80b84abe&originHeight=84&originWidth=848&originalType=binary&ratio=1&rotation=0&showTitle=false&size=4934&status=done&style=none&taskId=uacf1c606-6e69-4cbb-8158-b7c56adbf30&title=&width=848" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702300021651-558624ba-d852-43da-aa59-4fad9e072223.png" alt="img"></p>
 <h2 id="三-引入表格和分页"><a href="#三-引入表格和分页" class="headerlink" title="三.引入表格和分页"></a>三.引入表格和分页</h2><ol>
-<li>找到表格，复制代码引入app.vue<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478209116-41c089fd-0661-4edf-a77a-0c4c56681425.png#averageHue=%23cdd2b5&clientId=u686843c6-6f86-4&from=paste&height=268&id=u695eafbd&originHeight=268&originWidth=465&originalType=binary&ratio=1&rotation=0&showTitle=false&size=499627&status=done&style=none&taskId=udd86a0b5-fd57-4a7b-9534-f7f5805da3f&title=&width=465" alt="img"></li>
+<li>找到表格，复制代码引入app.vue<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702478209116-41c089fd-0661-4edf-a77a-0c4c56681425.png" alt="img"></li>
 </ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-table :data=&quot;tableData&quot; style=&quot;width: 100%&quot;&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;date&quot; label=&quot;Date&quot; width=&quot;180&quot; /&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;name&quot; label=&quot;Name&quot; width=&quot;180&quot; /&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;address&quot; label=&quot;Address&quot; /&gt;</span><br><span class="line">  &lt;/el-table&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span><br><span class="line">const tableData = [</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-03&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-02&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-04&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-01&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">]</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
 
 <ol>
-<li>找到分页，引入分页<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478241936-99f04e0f-0a46-45ea-8cec-2849c886f97f.png#averageHue=%23cacfaf&clientId=u686843c6-6f86-4&from=paste&height=170&id=u560714ea&originHeight=170&originWidth=421&originalType=binary&ratio=1&rotation=0&showTitle=false&size=286987&status=done&style=none&taskId=ud68ebdbf-cf96-4c3d-946c-486ce2fb408&title=&width=421" alt="img"></li>
+<li>找到分页，引入分页<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702478241936-99f04e0f-0a46-45ea-8cec-2849c886f97f.png" alt="img"></li>
 </ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-pagination</span><br><span class="line">    :page-size=&quot;20&quot;</span><br><span class="line">    :pager-count=&quot;11&quot;</span><br><span class="line">    layout=&quot;prev, pager, next&quot;</span><br><span class="line">    :total=&quot;1000&quot;</span><br><span class="line">  /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></div>
 
 <ol>
 <li>刷新浏览器页面，最终的页面如下：</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478272976-d56c923e-07ad-4c65-a0c9-0ca9a971be3a.png#averageHue=%23bccc96&clientId=u686843c6-6f86-4&from=paste&height=260&id=ua789d877&originHeight=260&originWidth=474&originalType=binary&ratio=1&rotation=0&showTitle=false&size=494099&status=done&style=none&taskId=uea6ed4cd-01e2-4472-8634-303e30ce7df&title=&width=474" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702478272976-d56c923e-07ad-4c65-a0c9-0ca9a971be3a.png" alt="img"></p>
 
       
     </div>
@@ -227,7 +229,7 @@
 <li>php文件只能在开了Apache和php的网站中打开</li>
 <li>变量和变量之间需要用点连接，符号和变量之间需要用点连接,符号和符号之间需要用点连接</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702348035103-f50decb1-ce3c-4112-b3dc-4e455206b78a.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702348035103-f50decb1-ce3c-4112-b3dc-4e455206b78a.png" alt="img"></p>
 <ol>
 <li>鸡兔同笼</li>
 </ol>
@@ -244,24 +246,24 @@
 <li>navicat在虚拟机连接虚拟机中的PHP的mysql（物理机同理）</li>
 </ol>
 <p>​     1.1. 下载navicat（此为破解版）</p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702383996613-e2c81d63-455c-4899-a531-bea6e0121e7b.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702383996613-e2c81d63-455c-4899-a531-bea6e0121e7b.png" alt="img"></p>
 <ol>
 <li>运行且安装navicat，直接双击即可</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384238496-e765dca9-65d9-42ff-afa4-68ad1478fa0a.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702384238496-e765dca9-65d9-42ff-afa4-68ad1478fa0a.png" alt="img"></p>
 <ol>
 <li>点击连接，Mysql连接，新建Mysql连接</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384686646-7136dedd-471d-44a6-9aa3-3355fec9f5e2.png" alt="img"></p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384706853-34e949dd-87bc-4cf8-b003-7aca3eec1aca.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702384686646-7136dedd-471d-44a6-9aa3-3355fec9f5e2.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702384706853-34e949dd-87bc-4cf8-b003-7aca3eec1aca.png" alt="img"></p>
 <ol>
 <li>连接名随便设置，主机即本机（虚拟机连不用改，物理机连物理机也不用改即locahost），密码为root</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384733708-a6a37d7f-edb6-4cd8-a254-5f19364e2fc7.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702384733708-a6a37d7f-edb6-4cd8-a254-5f19364e2fc7.png" alt="img"></p>
 <ol>
 <li>连接成功</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384995766-2fea2f0a-6133-4b7a-b8a3-e03141e396c3.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702384995766-2fea2f0a-6133-4b7a-b8a3-e03141e396c3.png" alt="img"></p>
 <ol>
 <li>navicat在物理机连接虚拟机</li>
 </ol>
@@ -277,14 +279,14 @@
 <p>PHP和MySql之间的关系：</p>
 <p>PHP和Mysql之间的关系，也是调用和被调用的关系，PHP通过SQL语言调用Mysql进行数据库的管理功能，Mysql数据库总是被动的接受操作指令。</p>
 <p>MYSQL是小型关系数据库软件，它为可以各种软件提供数据库支持，通过PHP可以操作Mysql，同理使用其它语言也可以操作Mysql，同样PHP也可以操作其他的数据库，不一定是MYSQL。</p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702385380635-3d6c2afd-a6bf-469b-8268-643b79b67a61.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702385380635-3d6c2afd-a6bf-469b-8268-643b79b67a61.png" alt="img"></p>
 <h3 id="四-用LINK和PHP联动"><a href="#四-用LINK和PHP联动" class="headerlink" title="四. 用LINK和PHP联动"></a>四. 用LINK和PHP联动</h3><ol>
 <li>简单的联动</li>
 </ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PHP"><figure class="iseeu highlight /php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$a</span> = <span class="string">&quot;1&quot;</span>;</span><br><span class="line"><span class="variable">$b</span> = <span class="string">&quot;1.0&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$a</span>==<span class="variable">$b</span>)&#123;</span><br><span class="line">  <span class="keyword">echo</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="keyword">echo</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
 
 <p>1.1. 打开网站得出结果</p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702385811279-793fa08d-d616-4a1e-9e3b-e2d1fd3fc43e.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702385811279-793fa08d-d616-4a1e-9e3b-e2d1fd3fc43e.png" alt="img"></p>
 <ol>
 <li>简单的联动2</li>
 </ol>
@@ -293,7 +295,7 @@
 <ol>
 <li>打开网站，地址栏输入a&#x3D;    (后面输入任意东西，结果都会显示（除了空格）)；</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702386137133-eea40371-9dbc-48e0-a6a9-c56e104c2599.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702386137133-eea40371-9dbc-48e0-a6a9-c56e104c2599.png" alt="img"></p>
 <ol>
 <li>index.php和Linklink.php联动</li>
 </ol>
@@ -308,8 +310,8 @@
 <ol>
 <li>打开网站，输入得</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702387509302-58383c7a-72e6-40ff-93fe-8c6b108246b2.png" alt="img"></p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702387303162-afabd6a9-2fc5-4ed6-b319-cd47ee33cf3a.jpeg" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702387509302-58383c7a-72e6-40ff-93fe-8c6b108246b2.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702387303162-afabd6a9-2fc5-4ed6-b319-cd47ee33cf3a.jpeg" alt="img"></p>
 <ol>
 <li>打开phpstudy所在的文件夹</li>
 </ol>
@@ -317,7 +319,7 @@
 <ol>
 <li>返回上一级目录，进入Extensions目录-&gt;MySQL5.7.26-&gt;bin</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702379527145-c7932599-ed70-461d-b2e2-fdd050643ca8.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702379527145-c7932599-ed70-461d-b2e2-fdd050643ca8.png" alt="img"></p>
 <ol>
 <li>在bin目录中打开cmd</li>
 <li>输入以下代码</li>
@@ -328,7 +330,7 @@
 <p>update user set Host&#x3D;’%’ where User&#x3D;’root’;</p>
 <p>flush privileges;</p>
 <p>出现Query OK的时候表示成功了</p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702380136514-0185a94b-3586-459f-91bd-a829d335e973.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702380136514-0185a94b-3586-459f-91bd-a829d335e973.png" alt="img"></p>
 <ol>
 <li>复制以下代码</li>
 </ol>
@@ -337,11 +339,11 @@
 <ol>
 <li>回到navicat,点击新建查询，然后将代码放进去，点击运行，然后会显示成功</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702381849794-ff01cd85-688b-4ca7-9582-95b783dc3b4b.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702381849794-ff01cd85-688b-4ca7-9582-95b783dc3b4b.png" alt="img"></p>
 <ol>
 <li>右击建立好的连接，选择新建数据库，数据库名为security，字符集选择utf8mb4，排序规则不选</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382248529-ece5b379-347e-4e71-adcb-865dee95f02e.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702382248529-ece5b379-347e-4e71-adcb-865dee95f02e.png" alt="img"></p>
 <ol>
 <li>制作一个简单的前后端交互，在php根目录中创建index.php和link.php文件然后用记事本打开</li>
 </ol>
@@ -350,11 +352,11 @@
 <ol>
 <li>网站-&gt;管理-&gt;打开网站</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382073549-b2c7a2cd-004a-4393-b1a1-ec6076ddef22.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702382073549-b2c7a2cd-004a-4393-b1a1-ec6076ddef22.png" alt="img"></p>
 <ol>
 <li>在地址栏里面的localhost后面加上&#x2F;index.php，用户名和密码都可以输入security数据库里面的内容，要是内容不对，点击提交会显示空白页面</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382132972-d54342a3-d96b-4004-8a26-5726249f6a76.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702382132972-d54342a3-d96b-4004-8a26-5726249f6a76.png" alt="img"></p>
 <h3 id="五-评论区和文件上传"><a href="#五-评论区和文件上传" class="headerlink" title="五. 评论区和文件上传"></a>五. 评论区和文件上传</h3><ol>
 <li>总共需要在phpstudy的根目录下创建五个文件，index.php,link.php,zhuye.php,comment.php,upload.php</li>
 </ol>
@@ -363,28 +365,26 @@
 <ol>
 <li>新建一个名为comments的表，右击表-&gt;新建表</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467009870-cabbbeba-4e6d-48e5-85bf-4a7b675c0254.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702467009870-cabbbeba-4e6d-48e5-85bf-4a7b675c0254.png" alt="img"></p>
 <ol>
 <li>在空白处右击-&gt;添加字段</li>
 </ol>
 <p>第一个名设置为id，类型为int，长度设置10就可以了</p>
 <p>第二个名为comment，类型为text，长度可以不用设置，设置完了保存</p>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467048019-5ddb8305-ac22-4772-8a5b-8fc7f6827579.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702467048019-5ddb8305-ac22-4772-8a5b-8fc7f6827579.png" alt="img"></p>
 <ol>
 <li>打开网站，然后就会进入localhost&#x2F;index.php，输入用户名和密码登录进去</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382073549-b2c7a2cd-004a-4393-b1a1-ec6076ddef22.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702382073549-b2c7a2cd-004a-4393-b1a1-ec6076ddef22.png" alt="img"></p>
 <ol>
 <li>可以在这里面发表评论，也可以查看最近的20条评论</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467370472-c77495a7-d5eb-4f0e-9c23-45b42ccb0dca.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702467370472-c77495a7-d5eb-4f0e-9c23-45b42ccb0dca.png" alt="img"></p>
 <ol>
 <li>这里也可以提交图片，选择好文件后点击提交就可以看到上传成功，还有文件类型、大小和存储位置</li>
 </ol>
-<p><img src="/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467441417-19952e65-1f51-4855-8dd8-df295fffb737.png" alt="img"></p>
-<ol>
-<li>点击注销会返回刚开始的index.php页面</li>
-</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702467441417-19952e65-1f51-4855-8dd8-df295fffb737.png" alt="img"></p>
+<p>点击注销会返回刚开始的index.php页面</p>
 
       
     </div>
@@ -421,13 +421,13 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <h3 id="一-postman安装"><a href="#一-postman安装" class="headerlink" title="一. postman安装"></a>一. postman安装</h3><ol>
-<li>由于数据绑定，数据交互在这个阶段不适合去学习，就直接转到了后端学习。下载安装postman,Postman是一款常用的API测试工具，它提供了一个用户友好的界面，可以帮助开发人员更加方便地发送HTTP请求并查看响应结果，以便于测试和调试API接口。链接：<a target="_blank" rel="noopener" href="https://www.postman.com/![img](https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385016305-e10bd786-5e2c-477c-a526-b7d92375dd53.png#averageHue=%23fcfbfb&clientId=ua7553f89-ffde-4&from=paste&height=341&id=ub1edfadb&originHeight=807&originWidth=1296&originalType=binary&ratio=1&rotation=0&showTitle=false&size=94706&status=done&style=none&taskId=ub243ff82-64b1-4196-8812-87d353f3a13&title=&width=547)">https://www.postman.com/![img](https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385016305-e10bd786-5e2c-477c-a526-b7d92375dd53.png#averageHue=%23fcfbfb&amp;clientId=ua7553f89-ffde-4&amp;from=paste&amp;height=341&amp;id=ub1edfadb&amp;originHeight=807&amp;originWidth=1296&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=94706&amp;status=done&amp;style=none&amp;taskId=ub243ff82-64b1-4196-8812-87d353f3a13&amp;title=&amp;width=547)</a></li>
+<li>由于数据绑定，数据交互在这个阶段不适合去学习，就直接转到了后端学习。下载安装postman,Postman是一款常用的API测试工具，它提供了一个用户友好的界面，可以帮助开发人员更加方便地发送HTTP请求并查看响应结果，以便于测试和调试API接口。链接：<a target="_blank" rel="noopener" href="https://www.postman.com/![img](https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702385016305-e10bd786-5e2c-477c-a526-b7d92375dd53.png)">https://www.postman.com/![img](https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702385016305-e10bd786-5e2c-477c-a526-b7d92375dd53.png)</a></li>
 </ol>
 <h3 id="二-phpstudy安装"><a href="#二-phpstudy安装" class="headerlink" title="二. phpstudy安装"></a>二. phpstudy安装</h3><ol>
-<li>下载phpstudy,链接：<a target="_blank" rel="noopener" href="https://www.xp.cn/">https://www.xp.cn/</a> 然后把这个软件复制到虚拟机win10hei，最后安装<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385661733-fc4fe7dd-d851-4628-a60b-2ff1fb41a7c6.png#averageHue=%23b6e6dd&clientId=ua7553f89-ffde-4&from=paste&height=371&id=u593f0509&originHeight=545&originWidth=605&originalType=binary&ratio=1&rotation=0&showTitle=false&size=51566&status=done&style=none&taskId=u49c1cf00-60ba-45b7-ae95-d1715cba92b&title=&width=412" alt="img"></li>
-<li>开启Apache2.4.39和MySQL5.7.26<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385948034-25cd2416-0be3-4eb0-9103-8fb67083714b.png#averageHue=%23e5c696&clientId=ua7553f89-ffde-4&from=paste&height=379&id=u8096fcb8&originHeight=637&originWidth=802&originalType=binary&ratio=1&rotation=0&showTitle=false&size=47231&status=done&style=none&taskId=uf1b17410-2405-4485-a3ac-0a6b78e23f5&title=&width=477" alt="img"></li>
-<li>点击网站，再点击高级设置，开启目录索引。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386176329-034e71fa-1b83-4c4c-b60d-26d057f4e760.png#averageHue=%23e7cb9f&clientId=ua7553f89-ffde-4&from=paste&height=337&id=ude3785bc&originHeight=645&originWidth=824&originalType=binary&ratio=1&rotation=0&showTitle=false&size=55473&status=done&style=none&taskId=u365f036a-dd09-4cfb-a0d3-413ed83b7c1&title=&width=430" alt="img"></li>
-<li>点击管理，打开根目录，删除第二张图下的四个文件<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386312283-2213bc21-fca1-4727-a0e9-d3d0e1760cdc.png#averageHue=%23e8d3b1&clientId=ua7553f89-ffde-4&from=paste&height=333&id=u6603bec9&originHeight=629&originWidth=815&originalType=binary&ratio=1&rotation=0&showTitle=false&size=55357&status=done&style=none&taskId=u7f84eb7a-28a2-4946-8c1e-41501d91a4c&title=&width=431" alt="img"><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386266153-327832f2-e12b-44ba-8feb-4f1e1a15986f.png#averageHue=%23fdfdfc&clientId=ua7553f89-ffde-4&from=paste&height=236&id=u29d1d840&originHeight=589&originWidth=1121&originalType=binary&ratio=1&rotation=0&showTitle=false&size=35022&status=done&style=none&taskId=ubdaaed14-4c76-4c68-a0d8-9eefbbe5e3f&title=&width=449" alt="img"></li>
+<li>下载phpstudy,链接：<a target="_blank" rel="noopener" href="https://www.xp.cn/">https://www.xp.cn/</a> 然后把这个软件复制到虚拟机win10hei，最后安装<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702385661733-fc4fe7dd-d851-4628-a60b-2ff1fb41a7c6.png" alt="img"></li>
+<li>开启Apache2.4.39和MySQL5.7.26<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702385948034-25cd2416-0be3-4eb0-9103-8fb67083714b.png" alt="img"></li>
+<li>点击网站，再点击高级设置，开启目录索引。<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702386176329-034e71fa-1b83-4c4c-b60d-26d057f4e760.png" alt="img"></li>
+<li>点击管理，打开根目录，删除第二张图下的四个文件<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386312283-2213bc21-fca1-4727-a0e9-d3d0e1760cdc.png#averageHue=%23e8d3b1&clientId=ua7553f89-ffde-4&from=paste&height=333&id=u6603bec9&originHeight=629&originWidth=815&originalType=binary&ratio=1&rotation=0&showTitle=false&size=55357&status=done&style=none&taskId=u7f84eb7a-28a2-4946-8c1e-41501d91a4c&title=&width=431" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702386266153-327832f2-e12b-44ba-8feb-4f1e1a15986f.png" alt="img"></li>
 <li>在物理机创建一个文本文档并重命名为Index.php,用vscode打开，输入以下代码并保存</li>
 </ol>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;123&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></div>
@@ -435,7 +435,7 @@
 
 
 <ol>
-<li>把这个文件复制到phpstudy的根目录下，然后打开网站（<strong>注意：apache只能在根目录下解析</strong>）<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702387512170-a4d0ef7a-b8c9-413b-9813-8cbae5ec70d5.png#averageHue=%23fbfbfb&clientId=ua7553f89-ffde-4&from=paste&height=327&id=ufb1c0c6f&originHeight=537&originWidth=800&originalType=binary&ratio=1&rotation=0&showTitle=false&size=30093&status=done&style=none&taskId=u0b38130d-64c2-436b-b807-97b2a1e98ac&title=&width=487" alt="img"></li>
+<li>把这个文件复制到phpstudy的根目录下，然后打开网站（<strong>注意：apache只能在根目录下解析</strong>）<img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1702387512170-a4d0ef7a-b8c9-413b-9813-8cbae5ec70d5.png" alt="img"></li>
 </ol>
 
       
