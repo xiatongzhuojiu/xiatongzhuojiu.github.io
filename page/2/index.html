@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main">
+  
+    <article id="post-物理机连接centos" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/10/%E7%89%A9%E7%90%86%E6%9C%BA%E8%BF%9E%E6%8E%A5centos/">物理机连接centos</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/10/%E7%89%A9%E7%90%86%E6%9C%BA%E8%BF%9E%E6%8E%A5centos/" class="article-date">
+  <time datetime="2023-12-10T01:42:51.000Z" itemprop="datePublished">2023-12-10</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="一-centos基本命令"><a href="#一-centos基本命令" class="headerlink" title="一. centos基本命令"></a>一. centos基本命令</h3><h4 id="1-注释"><a href="#1-注释" class="headerlink" title="1. 注释"></a>1. 注释</h4><p>ls文件目录</p>
+<p>ls &#x2F; 根目录</p>
+<p>ls -a  查看隐藏文件</p>
+<p>隐藏文件    .xxxxxx</p>
+<p>​                   xxxxx</p>
+<p>ls . 当前目录</p>
+<p>ls .. 上级目录</p>
+<p>touch 文件名   创建文件（按ls查看）</p>
+<p>touch  .文件名  创建隐藏文件（按ls -a查看）</p>
+<p>ls -al 显示当前目录下的所有的文件及属性</p>
+<p>mkdir 创建文件夹</p>
+<p>mkdir -p 文件名&#x2F;文件名&#x2F;文件名创建递归文件夹</p>
+<p>cd切换目录</p>
+<p>whoami查看当前用户的名字</p>
+<p>cat 文件名  查看文本文件</p>
+<p>id当前用户的权限</p>
+<p>pwd当前所在的目录</p>
+<p>rm -f 文件名   强制删除</p>
+<p>rm -rf test1&#x2F;  强制删除文件夹下所有的内容</p>
+<p>ls &#x2F;bin |grep mv查找bin目录所有带mv的文件</p>
+<p>ls &#x2F;bin|more</p>
+<p>ls &#x2F;bin|less</p>
+<p>ls &#x2F;bin|grep ls</p>
+<p>cat &#x2F;bin&#x2F;ls</p>
+<p>vi 文件名 编辑文件</p>
+<p>touch anaconda-ks.cfg</p>
+<p>cat -n 文件名  查看文件内容（-n显示行号）</p>
+<p>chmod 755 文件名 修改权限</p>
+<p>echo “123“(想要写的内容) &gt;&gt;test1&#x2F;4 将内容追加到test1目录中的4里面</p>
+<p>find &#x2F;bin -name ls搜索在bin目录下名字为ls的文件</p>
+<p>find &#x2F;bin -user root</p>
+<p>find &#x2F;bin size +204800  搜索bin目录中大小在100M以上的文件</p>
+<p>find &#x2F;bin -iname ls</p>
+<p>useradd admin 创建用户</p>
+<p>passwd admin 修改admin密码（不加用户名，就是修改当前用户密码）</p>
+<p>ip add显示centos的ip地址</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701396334535-a9b04a41-1b77-47b8-89dd-f5122c95ff90.png" alt="img"></p>
+<p>第一列是文件属性</p>
+<h4 id="二-物理机连接centos"><a href="#二-物理机连接centos" class="headerlink" title="二. 物理机连接centos"></a>二. 物理机连接centos</h4><ol>
+<li>systemctl enable sshd</li>
+<li>systemctl start sshd</li>
+<li>vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</li>
+</ol>
+<p> \4. 按esc，输入：set nu显示行号，找到38行去掉#后面没有yes就添加一个yes即可，PermitRootLogin yes</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701586413605-92c5d585-3938-4243-ae08-41ea4f9f563f.png" alt="img"></p>
+<ol>
+<li>systemctl restart sshd</li>
+<li>ip add 查找centos的地址</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701863655129-2d07fa23-bf65-4393-b68a-d482df2c9d9a.png" alt="img"></p>
+<ol>
+<li>ssh <a href="mailto:&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#57;&#x32;&#x2e;&#x31;&#x36;&#56;&#46;&#49;&#53;&#x37;&#x2e;&#49;&#52;&#49;">&#114;&#x6f;&#111;&#x74;&#x40;&#x31;&#57;&#x32;&#x2e;&#x31;&#x36;&#56;&#46;&#49;&#53;&#x37;&#x2e;&#49;&#52;&#49;</a></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701863797952-4e0ebcb5-76d4-4cf2-a3f8-c07c7ab8b7ed.png" alt="img"></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-博客（blog搭建）" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/10/%E5%8D%9A%E5%AE%A2%EF%BC%88blog%E6%90%AD%E5%BB%BA%EF%BC%89/">博客（blog搭建）</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/10/%E5%8D%9A%E5%AE%A2%EF%BC%88blog%E6%90%AD%E5%BB%BA%EF%BC%89/" class="article-date">
+  <time datetime="2023-12-10T01:42:36.000Z" itemprop="datePublished">2023-12-10</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="一-利用github搭建hexo博客"><a href="#一-利用github搭建hexo博客" class="headerlink" title="一. 利用github搭建hexo博客"></a>一. 利用github搭建hexo博客</h3><ol>
+<li><p>下载typora</p>
+</li>
+<li><p>下载picgo    <a target="_blank" rel="noopener" href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p>
+</li>
+<li><p>下载node.js  <a target="_blank" rel="noopener" href="https://nodejs.org/en]">https://nodejs.org/en</a></p>
+</li>
+<li><p>下载git</p>
+</li>
+<li><p>注册一个github账号</p>
+</li>
+<li><p>在本地新建一个文件夹，名为hexo，路径不要有中文（不建议在C盘建立文件夹）</p>
+</li>
+<li><p>选定hexo文件夹，右击-&gt;Git Bash Here</p>
+</li>
+<li><p>使用nmp命令安装hexo,输入：</p>
+</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nmp install -g hexo-cli</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864038301-75223756-0358-4306-a3fa-73fab9d8a595.png" alt="img"></p>
+<ol>
+<li>检测网站雏形，在Git Bash Here中输入以下命令</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>配置ssh</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>如果提示：No such file or directory说明你是第一次使用git</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>连续按三次回车后,打开用户目录,找到.ssh\id_rsa.pub文件,用记事本打开并复制里面的内容,打开你的github主页,进入个人设置-&gt;SSH and GPG keys-&gt;New SSH key:</li>
+<li>在key里面填写刚刚复制的内容</li>
+<li>尝试ssh连接,测试是否成功    ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>(邮箱地址不用改)</li>
+<li>在blog目录下打开cmd</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git-save</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>在上一个Git Bash Here中继续配置</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;asd&quot;//你的github用户名,非昵称</span><br><span class="line">git config --global user.name &quot;xxx@qq.com&quot;//填写你的github注册邮箱</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>在github上新建一个存储库,命名为github的用户名.github.io</li>
+<li>编辑_config.yml文件,在最后面改成这样</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	<span class="built_in">type</span>:git</span><br><span class="line">	repository:git@github.com:asd/asd.github.io.git</span><br><span class="line">	branch:main</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864516988-85820ffd-b961-443f-88bd-c3eab7960ced.png" alt="img"></p>
+<ol>
+<li>Git Bash Here中输入hexo d -g上传</li>
+</ol>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864567294-d081522b-426d-4b61-b823-bf89d37b9537.png" alt="img"></h3><h3 id="二-picgo和typora的连接"><a href="#二-picgo和typora的连接" class="headerlink" title="二. picgo和typora的连接"></a>二. picgo和typora的连接</h3><ol>
+<li>打开typora,选择文件-&gt;偏好设置</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423371632-41787294-abcf-4b8b-91d2-334307e8a083.png" alt="img"></p>
+<ol>
+<li>点击图像,插入图片时选择第三个,然后勾选前四个,上传服务选择PicGo(app),PicGo路径精确定位到PicGo.exe</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423418143-126c33c9-8687-4447-96cd-2954e1ff6838.png" alt="img"></p>
+<ol>
+<li>在github上点击个人主页,选择setting</li>
+<li>找到develoer setting-&gt;Personal access tokens-&gt;Tokens(classic)-&gt;Generate new token-&gt;Generate new token(classic),命名为123,生效时间选择永久,勾选第一个,生产令牌后复制令牌</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701864697175-ec59669d-a986-4e48-8585-5351f235dd8e.png" alt="img"></p>
+<ol>
+<li>打开PicGo,点击图床设置-&gt;GitHub,然后编辑</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423796833-9950406b-68e4-4a09-b7e8-50a9daa7b40a.png" alt="img"></p>
+<ol>
+<li>图床配置名为123,仓库名为github用户名&#x2F;仓库名,分支名设为main,Token处填写刚刚复制的令牌,设定存储路径为img&#x2F;,点击确定,然后设为默认图床</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701423908277-71582001-1645-4aea-af5e-cd41482b55fa.png" alt="img"></p>
+<ol>
+<li>回到typora,点击验证图片上传选项,会显示验证成功,这样PicGo和typora的连接就建立成功了.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701424133266-dd775176-adb1-480f-a2fb-db0f2ef72ea1.png" alt="img"></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-flash钓鱼" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/10/flash%E9%92%93%E9%B1%BC/">flash钓鱼</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/10/flash%E9%92%93%E9%B1%BC/" class="article-date">
+  <time datetime="2023-12-10T01:42:21.000Z" itemprop="datePublished">2023-12-10</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="一-flash页面制作"><a href="#一-flash页面制作" class="headerlink" title="一. flash页面制作"></a>一. flash页面制作</h3><ol>
+<li>在虚拟机上下载PHPstudy<a target="_blank" rel="noopener" href="https://www.xp.cn/">https://www.xp.cn/</a></li>
+<li>将Apache2.4.39启动</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701697977684-629af7e2-5f06-4ce7-8d13-1d1d880d9907.png" alt="img"></p>
+<ol>
+<li>点击网站-&gt;管理-&gt;打开根目录</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701698017271-115353cf-b315-4f58-9ea9-504fb1047d33.png" alt="img"></p>
+<ol>
+<li>删除里面所有的文件，然后创建一个txt后缀的文本文件，然后重命名为html后缀的index文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701698145457-8db74724-7488-49c1-820b-b7722abff50f.png" alt="img"></p>
+<ol>
+<li>在物理机上创建一个同样名字的HTML文件，再用物理机打开vscode</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701242703814-fa5379d5-1015-4289-9201-e127352a8641.png" alt="img"></p>
+<ol>
+<li>点击文件-&gt;打开文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701249884601-dddd9c7f-40c9-4e2a-87eb-b2dbc22de4e9.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701698255692-563ade03-87a6-46a2-8374-239f5c7095aa.png" alt="img"></p>
+<ol>
+<li>选择创建好了的html后缀的文件，然后点击打开，按住shift+!再回车就会出现主体代码</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701250528610-3f9e007a-c789-44c5-8b06-9fc229a01caa.png" alt="img"></p>
+<ol>
+<li>在body部分输入</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./flash.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701699019530-7e249031-e639-4513-9166-b9a22cf7bca1.png" alt="img"></p>
+<ol>
+<li>把刚刚在win10虚拟机中创建的html后缀的文件以记事本方式打开</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701256764522-d9dc980c-5cf8-4ccc-a1fb-e27e9af713a4.png" alt="img"></p>
+<ol>
+<li>把刚刚在vscode里面编辑的代码全选放到虚拟机打开的记事本中并保存</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257377858-610ce9af-b02a-4a33-8817-11d58da08b97.png" alt="img"></p>
+<ol>
+<li>使用一个js脚本，放在phpstudy的根目录下面</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/js/32753101/1701699059161-f7ef7a8f-7a62-4fa3-8764-f57faab29595.js">📎flash.js</a></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257517150-40da6315-c04d-4eca-a6ff-5bff5e230329.png" alt="img"></p>
+<ol>
+<li>打开phpsutdy,点击网站-&gt;管理-&gt;打开网站</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257104962-c5db6f7e-616d-4512-bd2a-e7b429701929.png" alt="img"></p>
+<ol>
+<li>打开之后就会显示出已经成功做好的flash页面</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701257675328-58254a46-e6ca-4d01-818d-c590670d89c7.png" alt="img"></p>
+<h3 id="二-flash捆绑木马"><a href="#二-flash捆绑木马" class="headerlink" title="二. flash捆绑木马"></a>二. flash捆绑木马</h3><ol>
+<li>关掉所有的杀毒软件，然后下载好一个木马程序和flash安装包</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/rar/32753101/1701778220095-6cc7bcf4-349c-450a-8cac-5d79161b44de.rar">📎木马.rar</a></p>
+<ol>
+<li>同时选中木马程序和flash安装包，右击，然后选择添加到压缩文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258200200-8652d6be-397d-4065-9d28-a8772764173b.png" alt="img"></p>
+<ol>
+<li>勾选创建自解压格式压缩文件</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258292065-c75d18f8-e62b-43ec-bfe7-ff4f2c0e7efa.png" alt="img"></p>
+<ol>
+<li>点击高级-&gt;自解压选项</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258341196-70b676d4-5e92-4b83-93bd-e7d699d36688.png" alt="img"></p>
+<ol>
+<li>解压路径设置 C:\windows\temp</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258415770-b0abff9f-be5c-499c-94e8-322225312f64.png" alt="img"></p>
+<ol>
+<li>然后点击设置选项卡，在解压后运行里面输入</li>
+</ol>
+<p>C:\windows\temp\flashcenter_pp_ax_install_cn.exe </p>
+<p>（黄色背景部分对应之前下载好的flash安装包的名字）</p>
+<p>C:\windows\temp\flash.exe</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258524712-fc5f3e77-99bf-43a6-8bcf-088ab7ccda83.png" alt="img"></p>
+<ol>
+<li>点击模式选项卡，选择全部隐藏</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258662803-6b087acd-87b1-4fb2-a402-3cc6602034a4.png" alt="img"></p>
+<ol>
+<li>点击更新选项卡，将更新模式和覆盖模式都选择为第二个</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701258732039-f6afe207-716d-4536-bb1e-a9b363100495.png" alt="img"></p>
+<ol>
+<li>点击确定，然后会显示出一个压缩包</li>
+<li>下载一个图标更改程序</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2023/rar/32753101/1701778220100-cbba1063-a32b-4869-a9f1-521c4184218c.rar">📎更改图标.rar</a></p>
+<ol>
+<li>点击Restorator.exe启动程序</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259200499-893f034b-5038-404e-8df3-93c51ba774d3.png" alt="img"></p>
+<ol>
+<li>将刚刚做好的压缩包和flash安装包拖到资源树中</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259331313-7c90067b-2109-4b43-8d78-037de2cdbb93.png" alt="img"></p>
+<ol>
+<li>删除压缩包的图标，将flash安装包的图标复制到压缩包中git clone</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259414320-5998c659-18b4-4ad1-b87e-f6d3e625aff0.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259443564-3d4782d7-e7d0-4301-a310-9d7c59665e9d.png" alt="img"></p>
+<ol>
+<li>再次点击压缩包的图标，可以发现它变成了flash安装包的图标</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259474971-33a92c45-eeef-4d07-b7cd-8f0c974944fa.png" alt="img"></p>
+<ol>
+<li>点击保存</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701259612821-1bc8a54f-0982-434e-8bb7-ff49d96f27fa.png" alt="img"></p>
+<p>16.将改好的压缩包放入phpstudy的根目录中，并将其名字改为flash压缩包的名字</p>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701260620277-b5c02f4a-9f08-4618-9473-179e12ca3f10.png" alt="img"></p>
+<ol>
+<li>打开浏览器，在地址栏输入127.0.0.1，就可以看到捆绑木马的flash网站做好了</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701260813077-0f742009-228e-480a-bf63-14a0633b3ba9.png" alt="img"></p>
+<ol>
+<li>点击立即升级，下载压缩包并打开，打开之后可以看到木马已经植入电脑</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701260922885-cbc0e881-ff3d-4de9-afc1-12bb17a4cfd5.png" alt="img"></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-hello-world" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/01/hello-world/">Hello World</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/01/hello-world/" class="article-date">
+  <time datetime="2023-12-01T13:45:20.893Z" itemprop="datePublished">2023-12-01</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        一路烟霞
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/">vue2写网页</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/">vue写网页</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/">PHP后端知识点</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/postman%E3%80%81phpstuady%E5%AE%89%E8%A3%85/">postman、phpstuady安装</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/%E7%AC%94%E8%AE%B010/">笔记10</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2023 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

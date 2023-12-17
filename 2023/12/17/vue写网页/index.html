@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>vue写网页 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="一.  一.引入Element按钮，Container布局容器，菜单侧边栏 访问Element官网。  链接：https:&#x2F;&#x2F;element-plus.org&#x2F;zh-CN&#x2F;component&#x2F;button.html  选择红色按钮，复制红色按钮的代码到vscode的app.vue文件。 12345678910&lt;script setup&gt;import &#123; ElButton &amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue写网页">
+<meta property="og:url" content="http://example.com/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.  一.引入Element按钮，Container布局容器，菜单侧边栏 访问Element官网。  链接：https:&#x2F;&#x2F;element-plus.org&#x2F;zh-CN&#x2F;component&#x2F;button.html  选择红色按钮，复制红色按钮的代码到vscode的app.vue文件。 12345678910&lt;script setup&gt;import &#123; ElButton &amp;#">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477935327-f9d694eb-44fc-46d6-8140-63ab3670947e.png#averageHue=%23fcfcfc&clientId=u686843c6-6f86-4&from=paste&height=207&id=u7a1049b3&originHeight=207&originWidth=344&originalType=binary&ratio=1&rotation=0&showTitle=false&size=285576&status=done&style=none&taskId=u2bfece8f-e5a7-4fcb-86ab-f58ffb97c88&title=&width=344">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477982134-682e8b51-64a8-4a95-9d30-9f950184080b.png#averageHue=%23ebf0f9&clientId=u686843c6-6f86-4&from=paste&height=226&id=u20136b70&originHeight=226&originWidth=418&originalType=binary&ratio=1&rotation=0&showTitle=false&size=378794&status=done&style=none&taskId=ueafe1824-6a5e-49e8-8984-f8bcd9f2299&title=&width=418">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478014643-2c19b422-9987-4c66-a26b-05ed460f4661.png#averageHue=%23bcbc98&clientId=u686843c6-6f86-4&from=paste&height=331&id=u69e286d0&originHeight=331&originWidth=454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=602477&status=done&style=none&taskId=u81bd321d-ddcc-48a1-abee-65082b0d39d&title=&width=454">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298169039-6bf73205-5c61-4b50-b56b-518fa680bfea.png#averageHue=%23232221&clientId=uc4d5c055-4805-4&from=paste&height=281&id=u8c61a322&originHeight=281&originWidth=497&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20001&status=done&style=none&taskId=u2b7d4666-a4bc-4b3f-89fa-b58fef5d380&title=&width=497">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478133938-4a3a0f16-2685-47d7-b5fc-2fa4e3f3f26c.png#averageHue=%23fefefe&clientId=u686843c6-6f86-4&from=paste&height=355&id=u035a8ae0&originHeight=355&originWidth=625&originalType=binary&ratio=1&rotation=0&showTitle=false&size=889370&status=done&style=none&taskId=u2566e7ca-593a-4425-b6be-c8667a1be0d&title=&width=625">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298662954-37b0eb22-a73f-4b8f-badd-6a21f1a55a4b.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=333&id=u40d34559&originHeight=364&originWidth=581&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29637&status=done&style=none&taskId=u91f17d98-dc0b-494f-915e-424c2eae517&title=&width=532">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299037715-c342f095-d463-419a-98bf-1b325dcfdd94.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=114&id=udeab474a&originHeight=114&originWidth=364&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5367&status=done&style=none&taskId=u5c456bbd-ab73-4e77-908f-be0e33acb74&title=&width=364">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299408016-718c337f-2f6d-4c53-8f5f-db3ee347fe6f.png#averageHue=%23f0efee&clientId=uc4d5c055-4805-4&from=paste&height=109&id=ue2ca1ccb&originHeight=109&originWidth=1146&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14217&status=done&style=none&taskId=u01b9a51e-c2a4-4e0b-b481-6f4f80d0065&title=&width=1146">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702300021651-558624ba-d852-43da-aa59-4fad9e072223.png#averageHue=%23f6f6f5&clientId=uc4d5c055-4805-4&from=paste&height=84&id=u80b84abe&originHeight=84&originWidth=848&originalType=binary&ratio=1&rotation=0&showTitle=false&size=4934&status=done&style=none&taskId=uacf1c606-6e69-4cbb-8158-b7c56adbf30&title=&width=848">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478209116-41c089fd-0661-4edf-a77a-0c4c56681425.png#averageHue=%23cdd2b5&clientId=u686843c6-6f86-4&from=paste&height=268&id=u695eafbd&originHeight=268&originWidth=465&originalType=binary&ratio=1&rotation=0&showTitle=false&size=499627&status=done&style=none&taskId=udd86a0b5-fd57-4a7b-9534-f7f5805da3f&title=&width=465">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478241936-99f04e0f-0a46-45ea-8cec-2849c886f97f.png#averageHue=%23cacfaf&clientId=u686843c6-6f86-4&from=paste&height=170&id=u560714ea&originHeight=170&originWidth=421&originalType=binary&ratio=1&rotation=0&showTitle=false&size=286987&status=done&style=none&taskId=ud68ebdbf-cf96-4c3d-946c-486ce2fb408&title=&width=421">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478272976-d56c923e-07ad-4c65-a0c9-0ca9a971be3a.png#averageHue=%23bccc96&clientId=u686843c6-6f86-4&from=paste&height=260&id=ua789d877&originHeight=260&originWidth=474&originalType=binary&ratio=1&rotation=0&showTitle=false&size=494099&status=done&style=none&taskId=uea6ed4cd-01e2-4472-8634-303e30ce7df&title=&width=474">
+<meta property="article:published_time" content="2023-12-17T03:20:10.000Z">
+<meta property="article:modified_time" content="2023-12-17T03:25:40.604Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477935327-f9d694eb-44fc-46d6-8140-63ab3670947e.png#averageHue=%23fcfcfc&clientId=u686843c6-6f86-4&from=paste&height=207&id=u7a1049b3&originHeight=207&originWidth=344&originalType=binary&ratio=1&rotation=0&showTitle=false&size=285576&status=done&style=none&taskId=u2bfece8f-e5a7-4fcb-86ab-f58ffb97c88&title=&width=344">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-vue写网页" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      vue写网页
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/" class="article-date">
+  <time datetime="2023-12-17T03:20:10.000Z" itemprop="datePublished">2023-12-17</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>一. </p>
+<h2 id="一-引入Element按钮，Container布局容器，菜单侧边栏"><a href="#一-引入Element按钮，Container布局容器，菜单侧边栏" class="headerlink" title="一.引入Element按钮，Container布局容器，菜单侧边栏"></a>一.引入Element按钮，Container布局容器，菜单侧边栏</h2><ol>
+<li>访问Element官网。</li>
+</ol>
+<p>链接：<a target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/component/button.html">https://element-plus.org/zh-CN/component/button.html</a> </p>
+<p>选择红色按钮，复制红色按钮的代码到vscode的app.vue文件。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ElButton &#125; from &#x27;element-plus&#x27;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">&lt;el-button type=&quot;info&quot;&gt;Danger&lt;/el-button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>发现红色按钮位置是在正中间，是错误的。后来经过老师的提示，要把main.js文件中下列居中代码删掉。import ‘.&#x2F;assets&#x2F;main.css’</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477935327-f9d694eb-44fc-46d6-8140-63ab3670947e.png#averageHue=%23fcfcfc&clientId=u686843c6-6f86-4&from=paste&height=207&id=u7a1049b3&originHeight=207&originWidth=344&originalType=binary&ratio=1&rotation=0&showTitle=false&size=285576&status=done&style=none&taskId=u2bfece8f-e5a7-4fcb-86ab-f58ffb97c88&title=&width=344" alt="img"></p>
+<ol>
+<li>找到要用到的布局，先查看它的代码，再复制到app.vue。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477982134-682e8b51-64a8-4a95-9d30-9f950184080b.png#averageHue=%23ebf0f9&clientId=u686843c6-6f86-4&from=paste&height=226&id=u20136b70&originHeight=226&originWidth=418&originalType=binary&ratio=1&rotation=0&showTitle=false&size=378794&status=done&style=none&taskId=ueafe1824-6a5e-49e8-8984-f8bcd9f2299&title=&width=418" alt="img"></li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;common-layout&quot;&gt;</span><br><span class="line">    &lt;el-container&gt;</span><br><span class="line">      &lt;el-aside width=&quot;200px&quot;&gt;Aside&lt;/el-aside&gt;</span><br><span class="line">      &lt;el-container&gt;</span><br><span class="line">        &lt;el-header&gt;Header&lt;/el-header&gt;</span><br><span class="line">        &lt;el-main&gt;Main&lt;/el-main&gt;</span><br><span class="line">      &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>5.找到要用到的菜单侧边栏，先查看它的代码，再复制到app.vue。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478014643-2c19b422-9987-4c66-a26b-05ed460f4661.png#averageHue=%23bcbc98&clientId=u686843c6-6f86-4&from=paste&height=331&id=u69e286d0&originHeight=331&originWidth=454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=602477&status=done&style=none&taskId=u81bd321d-ddcc-48a1-abee-65082b0d39d&title=&width=454" alt="img"></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-row class=&quot;tac&quot;&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">      &lt;h5 class=&quot;mb-2&quot;&gt;Default colors&lt;/h5&gt;</span><br><span class="line">      &lt;el-menu</span><br><span class="line">        default-active=&quot;2&quot;</span><br><span class="line">        class=&quot;el-menu-vertical-demo&quot;</span><br><span class="line">        @open=&quot;handleOpen&quot;</span><br><span class="line">        @close=&quot;handleClose&quot;</span><br><span class="line">      &gt;</span><br><span class="line">       </span><br><span class="line">        &lt;el-menu-item index=&quot;2&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;icon-menu /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Two&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;3&quot; disabled&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;document /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Three&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;4&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;setting /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Four&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">      &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-col&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">      &lt;h5 class=&quot;mb-2&quot;&gt;Custom colors&lt;/h5&gt;</span><br><span class="line">      &lt;el-menu</span><br><span class="line">        active-text-color=&quot;#ffd04b&quot;</span><br><span class="line">        background-color=&quot;#545c64&quot;</span><br><span class="line">        class=&quot;el-menu-vertical-demo&quot;</span><br><span class="line">        default-active=&quot;2&quot;</span><br><span class="line">        text-color=&quot;#fff&quot;</span><br><span class="line">        @open=&quot;handleOpen&quot;</span><br><span class="line">        @close=&quot;handleClose&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;el-sub-menu index=&quot;1&quot;&gt;</span><br><span class="line">          &lt;template #title&gt;</span><br><span class="line">            &lt;el-icon&gt;&lt;location /&gt;&lt;/el-icon&gt;</span><br><span class="line">            &lt;span&gt;Navigator One&lt;/span&gt;</span><br><span class="line">          &lt;/template&gt;</span><br><span class="line">          &lt;el-menu-item-group title=&quot;Group One&quot;&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-1&quot;&gt;item one&lt;/el-menu-item&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-2&quot;&gt;item two&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-menu-item-group&gt;</span><br><span class="line">          &lt;el-menu-item-group title=&quot;Group Two&quot;&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-3&quot;&gt;item three&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-menu-item-group&gt;</span><br><span class="line">          &lt;el-sub-menu index=&quot;1-4&quot;&gt;</span><br><span class="line">            &lt;template #title&gt;item four&lt;/template&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-4-1&quot;&gt;item one&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;2&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;icon-menu /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Two&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;3&quot; disabled&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;document /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Three&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;4&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;setting /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Four&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">      &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-col&gt;</span><br><span class="line">  &lt;/el-row&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span><br><span class="line">import &#123;</span><br><span class="line">  Document,</span><br><span class="line">  Menu as IconMenu,</span><br><span class="line">  Location,</span><br><span class="line">  Setting,</span><br><span class="line">&#125; from &#x27;@element-plus/icons-vue&#x27;</span><br><span class="line">const handleOpen = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">const handleClose = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<ol>
+<li>在app.vue中删除下列代码的string</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const handleOpen = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">const handleClose = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>把span&#x3D;12改成span&#x3D;24，侧边栏span&#x3D;24表示占满 el-col :span&#x3D;”24”表示竖直方向占满<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298169039-6bf73205-5c61-4b50-b56b-518fa680bfea.png#averageHue=%23232221&clientId=uc4d5c055-4805-4&from=paste&height=281&id=u8c61a322&originHeight=281&originWidth=497&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20001&status=done&style=none&taskId=u2b7d4666-a4bc-4b3f-89fa-b58fef5d380&title=&width=497" alt="img"></li>
+<li>在侧边栏导入图标，复制代码在对应的用户管理，权限管理，商品管理，订单管理语句各自的前一行。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478133938-4a3a0f16-2685-47d7-b5fc-2fa4e3f3f26c.png#averageHue=%23fefefe&clientId=u686843c6-6f86-4&from=paste&height=355&id=u035a8ae0&originHeight=355&originWidth=625&originalType=binary&ratio=1&rotation=0&showTitle=false&size=889370&status=done&style=none&taskId=u2566e7ca-593a-4425-b6be-c8667a1be0d&title=&width=625" alt="img"><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298662954-37b0eb22-a73f-4b8f-badd-6a21f1a55a4b.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=333&id=u40d34559&originHeight=364&originWidth=581&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29637&status=done&style=none&taskId=u91f17d98-dc0b-494f-915e-424c2eae517&title=&width=532" alt="img"></li>
+</ol>
+<h2 id="二-在el-header设置阴影，圆角边框"><a href="#二-在el-header设置阴影，圆角边框" class="headerlink" title="二.在el-header设置阴影，圆角边框"></a>二.在el-header设置阴影，圆角边框</h2><ol>
+<li>在el-header中创建styled-box1类。（在style创建styled-box1样式）<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299037715-c342f095-d463-419a-98bf-1b325dcfdd94.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=114&id=udeab474a&originHeight=114&originWidth=364&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5367&status=done&style=none&taskId=u5c456bbd-ab73-4e77-908f-be0e33acb74&title=&width=364" alt="img"> </li>
+<li>CTRL+S保存，在终端输入npm run dev, 结果如下图<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299408016-718c337f-2f6d-4c53-8f5f-db3ee347fe6f.png#averageHue=%23f0efee&clientId=uc4d5c055-4805-4&from=paste&height=109&id=ue2ca1ccb&originHeight=109&originWidth=1146&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14217&status=done&style=none&taskId=u01b9a51e-c2a4-4e0b-b481-6f4f80d0065&title=&width=1146" alt="img"></li>
+<li>引入搜索框input和搜索，添加用户两个按钮，注意el-row是行，el-col是列。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">            &lt;el-col :span=&quot;4&quot;</span><br><span class="line">              &gt;&lt;el-input v-model=&quot;input&quot; placeholder=&quot;请输入搜索内容&quot;</span><br><span class="line">            /&gt;&lt;/el-col&gt;</span><br><span class="line">            &lt;el-col :span=&quot;2&quot;&gt;&lt;el-button type=&quot;success&quot;&gt;搜索&lt;/el-button&gt;&lt;/el-col&gt;</span><br><span class="line">            &lt;el-col :span=&quot;2&quot;&gt;   &lt;el-button type=&quot;success&quot;&gt;添加用户&lt;/el-button&gt;&lt;/el-col&gt;</span><br><span class="line">          &lt;/el-row&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702300021651-558624ba-d852-43da-aa59-4fad9e072223.png#averageHue=%23f6f6f5&clientId=uc4d5c055-4805-4&from=paste&height=84&id=u80b84abe&originHeight=84&originWidth=848&originalType=binary&ratio=1&rotation=0&showTitle=false&size=4934&status=done&style=none&taskId=uacf1c606-6e69-4cbb-8158-b7c56adbf30&title=&width=848" alt="img"></p>
+<h2 id="三-引入表格和分页"><a href="#三-引入表格和分页" class="headerlink" title="三.引入表格和分页"></a>三.引入表格和分页</h2><ol>
+<li>找到表格，复制代码引入app.vue<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478209116-41c089fd-0661-4edf-a77a-0c4c56681425.png#averageHue=%23cdd2b5&clientId=u686843c6-6f86-4&from=paste&height=268&id=u695eafbd&originHeight=268&originWidth=465&originalType=binary&ratio=1&rotation=0&showTitle=false&size=499627&status=done&style=none&taskId=udd86a0b5-fd57-4a7b-9534-f7f5805da3f&title=&width=465" alt="img"></li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-table :data=&quot;tableData&quot; style=&quot;width: 100%&quot;&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;date&quot; label=&quot;Date&quot; width=&quot;180&quot; /&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;name&quot; label=&quot;Name&quot; width=&quot;180&quot; /&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;address&quot; label=&quot;Address&quot; /&gt;</span><br><span class="line">  &lt;/el-table&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span><br><span class="line">const tableData = [</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-03&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-02&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-04&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-01&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">]</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>找到分页，引入分页<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478241936-99f04e0f-0a46-45ea-8cec-2849c886f97f.png#averageHue=%23cacfaf&clientId=u686843c6-6f86-4&from=paste&height=170&id=u560714ea&originHeight=170&originWidth=421&originalType=binary&ratio=1&rotation=0&showTitle=false&size=286987&status=done&style=none&taskId=ud68ebdbf-cf96-4c3d-946c-486ce2fb408&title=&width=421" alt="img"></li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-pagination</span><br><span class="line">    :page-size=&quot;20&quot;</span><br><span class="line">    :pager-count=&quot;11&quot;</span><br><span class="line">    layout=&quot;prev, pager, next&quot;</span><br><span class="line">    :total=&quot;1000&quot;</span><br><span class="line">  /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>刷新浏览器页面，最终的页面如下：</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478272976-d56c923e-07ad-4c65-a0c9-0ca9a971be3a.png#averageHue=%23bccc96&clientId=u686843c6-6f86-4&from=paste&height=260&id=ua789d877&originHeight=260&originWidth=474&originalType=binary&ratio=1&rotation=0&showTitle=false&size=494099&status=done&style=none&taskId=uea6ed4cd-01e2-4472-8634-303e30ce7df&title=&width=474" alt="img"></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            vue2写网页
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/17/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">PHP后端知识点</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        一路烟霞
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/">vue2写网页</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/">vue写网页</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/">PHP后端知识点</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/postman%E3%80%81phpstuady%E5%AE%89%E8%A3%85/">postman、phpstuady安装</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/%E7%AC%94%E8%AE%B010/">笔记10</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2023 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

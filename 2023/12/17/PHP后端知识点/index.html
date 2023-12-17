@@ -5,18 +5,47 @@
   
 
   
-  <title>Hexo</title>
+  <title>PHP后端知识点 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="一. PHP的特性 php文件只能在开了Apache和php的网站中打开 变量和变量之间需要用点连接，符号和变量之间需要用点连接,符号和符号之间需要用点连接    鸡兔同笼  问题：假设在笼子里有头数为8的动物，总共有22只脚。 12345678910&lt;?php for ($i&#x3D;0;$i&lt;8;$i++) &#123;    $a&#x3D;8-$i;    if (2*$a+4*$i&#x3D;&#x3D;22)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP后端知识点">
+<meta property="og:url" content="http://example.com/2023/12/17/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一. PHP的特性 php文件只能在开了Apache和php的网站中打开 变量和变量之间需要用点连接，符号和变量之间需要用点连接,符号和符号之间需要用点连接    鸡兔同笼  问题：假设在笼子里有头数为8的动物，总共有22只脚。 12345678910&lt;?php for ($i&#x3D;0;$i&lt;8;$i++) &#123;    $a&#x3D;8-$i;    if (2*$a+4*$i&#x3D;&#x3D;22)">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702348035103-f50decb1-ce3c-4112-b3dc-4e455206b78a.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702383996613-e2c81d63-455c-4899-a531-bea6e0121e7b.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384238496-e765dca9-65d9-42ff-afa4-68ad1478fa0a.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384686646-7136dedd-471d-44a6-9aa3-3355fec9f5e2.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384706853-34e949dd-87bc-4cf8-b003-7aca3eec1aca.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384733708-a6a37d7f-edb6-4cd8-a254-5f19364e2fc7.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702384995766-2fea2f0a-6133-4b7a-b8a3-e03141e396c3.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702385380635-3d6c2afd-a6bf-469b-8268-643b79b67a61.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702385811279-793fa08d-d616-4a1e-9e3b-e2d1fd3fc43e.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702386137133-eea40371-9dbc-48e0-a6a9-c56e104c2599.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702387509302-58383c7a-72e6-40ff-93fe-8c6b108246b2.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702387303162-afabd6a9-2fc5-4ed6-b319-cd47ee33cf3a.jpeg">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702379475929-bed000b1-0d62-4b15-9bd5-4176835b9cbf.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702379527145-c7932599-ed70-461d-b2e2-fdd050643ca8.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702380136514-0185a94b-3586-459f-91bd-a829d335e973.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702381849794-ff01cd85-688b-4ca7-9582-95b783dc3b4b.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382248529-ece5b379-347e-4e71-adcb-865dee95f02e.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382073549-b2c7a2cd-004a-4393-b1a1-ec6076ddef22.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382132972-d54342a3-d96b-4004-8a26-5726249f6a76.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467009870-cabbbeba-4e6d-48e5-85bf-4a7b675c0254.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467048019-5ddb8305-ac22-4772-8a5b-8fc7f6827579.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702382073549-b2c7a2cd-004a-4393-b1a1-ec6076ddef22.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467370472-c77495a7-d5eb-4f0e-9c23-45b42ccb0dca.png">
+<meta property="og:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702467441417-19952e65-1f51-4855-8dd8-df295fffb737.png">
+<meta property="article:published_time" content="2023-12-17T03:19:30.000Z">
+<meta property="article:modified_time" content="2023-12-17T03:26:42.780Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9.assets/1702348035103-f50decb1-ce3c-4112-b3dc-4e455206b78a.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -55,156 +84,13 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main">
-  
-    <article id="post-vue2写网页" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-PHP后端知识点" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/">vue2写网页</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/" class="article-date">
-  <time datetime="2023-12-17T03:21:12.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="一-从element引入按钮"><a href="#一-从element引入按钮" class="headerlink" title="一. 从element引入按钮"></a>一. 从element引入按钮</h3><ol>
-<li>访问element zn-cn官网，链接：<a target="_blank" rel="noopener" href="https://element.eleme.cn/#/zh-CN/component/installation">https://element.eleme.cn/#/zh-CN/component/installation</a> 引入样式和组件库</li>
-<li>2.在左侧的菜单栏的安装，复制以下代码，在vscode中新建index.php文件，粘贴到index.php文件</li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&quot;&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;                              //3,4行是body中的内容</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!-- import Vue before Element --&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;!-- import JavaScript --&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/element-ui/lib/index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: &#x27;#app&#x27;,</span><br><span class="line">      data: function() &#123;</span><br><span class="line">        return &#123; visible: false &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>在左侧的菜单栏找到button按钮，复制一个蓝色按钮的代码，粘贴到<div id="app"></div>中。复制以下三个链接在浏览器打开，然后复制代码，新建index.css vue.js index.js，把代码对应粘贴到这三个文件，引入样式和组件库 。</li>
-</ol>
-<p>a. <a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">https://unpkg.com/element-ui/lib/theme-chalk/index.css</a></p>
-<p>b. <a target="_blank" rel="noopener" href="https://unpkg.com/vue@2/dist/vue.js">https://unpkg.com/vue@2/dist/vue.js</a></p>
-<p>c. <a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/index.js">https://unpkg.com/element-ui/lib/index.js</a></p>
-<p>3.<a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/index.js">https://unpkg.com/element-ui/lib/index.js</a></p>
-<p><img src="/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782810414-f099849d-6cbc-4637-bfa2-0a07acca9b7b.png" alt="img"></p>
-<ol>
-<li>右击index.php,在文件管理器中显示，复制上图四个文件，粘贴到虚拟机win10hei的PHPstudy的根目录下，ctrl+s保存，在phpstudy中打开网站，出现按钮。</li>
-</ol>
-<p><img src="/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782827520-44310496-e52f-4df4-82b3-bbd72ca0a6e4.png" alt="img"></p>
-<h3 id="二-制作网站"><a href="#二-制作网站" class="headerlink" title="二. 制作网站"></a>二. 制作网站</h3>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-vue写网页" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/">vue写网页</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/" class="article-date">
-  <time datetime="2023-12-17T03:20:10.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>一. </p>
-<h2 id="一-引入Element按钮，Container布局容器，菜单侧边栏"><a href="#一-引入Element按钮，Container布局容器，菜单侧边栏" class="headerlink" title="一.引入Element按钮，Container布局容器，菜单侧边栏"></a>一.引入Element按钮，Container布局容器，菜单侧边栏</h2><ol>
-<li>访问Element官网。</li>
-</ol>
-<p>链接：<a target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/component/button.html">https://element-plus.org/zh-CN/component/button.html</a> </p>
-<p>选择红色按钮，复制红色按钮的代码到vscode的app.vue文件。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ElButton &#125; from &#x27;element-plus&#x27;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">&lt;el-button type=&quot;info&quot;&gt;Danger&lt;/el-button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>发现红色按钮位置是在正中间，是错误的。后来经过老师的提示，要把main.js文件中下列居中代码删掉。import ‘.&#x2F;assets&#x2F;main.css’</li>
-</ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477935327-f9d694eb-44fc-46d6-8140-63ab3670947e.png#averageHue=%23fcfcfc&clientId=u686843c6-6f86-4&from=paste&height=207&id=u7a1049b3&originHeight=207&originWidth=344&originalType=binary&ratio=1&rotation=0&showTitle=false&size=285576&status=done&style=none&taskId=u2bfece8f-e5a7-4fcb-86ab-f58ffb97c88&title=&width=344" alt="img"></p>
-<ol>
-<li>找到要用到的布局，先查看它的代码，再复制到app.vue。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702477982134-682e8b51-64a8-4a95-9d30-9f950184080b.png#averageHue=%23ebf0f9&clientId=u686843c6-6f86-4&from=paste&height=226&id=u20136b70&originHeight=226&originWidth=418&originalType=binary&ratio=1&rotation=0&showTitle=false&size=378794&status=done&style=none&taskId=ueafe1824-6a5e-49e8-8984-f8bcd9f2299&title=&width=418" alt="img"></li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;common-layout&quot;&gt;</span><br><span class="line">    &lt;el-container&gt;</span><br><span class="line">      &lt;el-aside width=&quot;200px&quot;&gt;Aside&lt;/el-aside&gt;</span><br><span class="line">      &lt;el-container&gt;</span><br><span class="line">        &lt;el-header&gt;Header&lt;/el-header&gt;</span><br><span class="line">        &lt;el-main&gt;Main&lt;/el-main&gt;</span><br><span class="line">      &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>5.找到要用到的菜单侧边栏，先查看它的代码，再复制到app.vue。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478014643-2c19b422-9987-4c66-a26b-05ed460f4661.png#averageHue=%23bcbc98&clientId=u686843c6-6f86-4&from=paste&height=331&id=u69e286d0&originHeight=331&originWidth=454&originalType=binary&ratio=1&rotation=0&showTitle=false&size=602477&status=done&style=none&taskId=u81bd321d-ddcc-48a1-abee-65082b0d39d&title=&width=454" alt="img"></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-row class=&quot;tac&quot;&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">      &lt;h5 class=&quot;mb-2&quot;&gt;Default colors&lt;/h5&gt;</span><br><span class="line">      &lt;el-menu</span><br><span class="line">        default-active=&quot;2&quot;</span><br><span class="line">        class=&quot;el-menu-vertical-demo&quot;</span><br><span class="line">        @open=&quot;handleOpen&quot;</span><br><span class="line">        @close=&quot;handleClose&quot;</span><br><span class="line">      &gt;</span><br><span class="line">       </span><br><span class="line">        &lt;el-menu-item index=&quot;2&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;icon-menu /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Two&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;3&quot; disabled&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;document /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Three&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;4&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;setting /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Four&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">      &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-col&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">      &lt;h5 class=&quot;mb-2&quot;&gt;Custom colors&lt;/h5&gt;</span><br><span class="line">      &lt;el-menu</span><br><span class="line">        active-text-color=&quot;#ffd04b&quot;</span><br><span class="line">        background-color=&quot;#545c64&quot;</span><br><span class="line">        class=&quot;el-menu-vertical-demo&quot;</span><br><span class="line">        default-active=&quot;2&quot;</span><br><span class="line">        text-color=&quot;#fff&quot;</span><br><span class="line">        @open=&quot;handleOpen&quot;</span><br><span class="line">        @close=&quot;handleClose&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;el-sub-menu index=&quot;1&quot;&gt;</span><br><span class="line">          &lt;template #title&gt;</span><br><span class="line">            &lt;el-icon&gt;&lt;location /&gt;&lt;/el-icon&gt;</span><br><span class="line">            &lt;span&gt;Navigator One&lt;/span&gt;</span><br><span class="line">          &lt;/template&gt;</span><br><span class="line">          &lt;el-menu-item-group title=&quot;Group One&quot;&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-1&quot;&gt;item one&lt;/el-menu-item&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-2&quot;&gt;item two&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-menu-item-group&gt;</span><br><span class="line">          &lt;el-menu-item-group title=&quot;Group Two&quot;&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-3&quot;&gt;item three&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-menu-item-group&gt;</span><br><span class="line">          &lt;el-sub-menu index=&quot;1-4&quot;&gt;</span><br><span class="line">            &lt;template #title&gt;item four&lt;/template&gt;</span><br><span class="line">            &lt;el-menu-item index=&quot;1-4-1&quot;&gt;item one&lt;/el-menu-item&gt;</span><br><span class="line">          &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;/el-sub-menu&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;2&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;icon-menu /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Two&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;3&quot; disabled&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;document /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Three&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">        &lt;el-menu-item index=&quot;4&quot;&gt;</span><br><span class="line">          &lt;el-icon&gt;&lt;setting /&gt;&lt;/el-icon&gt;</span><br><span class="line">          &lt;span&gt;Navigator Four&lt;/span&gt;</span><br><span class="line">        &lt;/el-menu-item&gt;</span><br><span class="line">      &lt;/el-menu&gt;</span><br><span class="line">    &lt;/el-col&gt;</span><br><span class="line">  &lt;/el-row&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span><br><span class="line">import &#123;</span><br><span class="line">  Document,</span><br><span class="line">  Menu as IconMenu,</span><br><span class="line">  Location,</span><br><span class="line">  Setting,</span><br><span class="line">&#125; from &#x27;@element-plus/icons-vue&#x27;</span><br><span class="line">const handleOpen = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">const handleClose = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
-
-
-
-<ol>
-<li>在app.vue中删除下列代码的string</li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const handleOpen = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br><span class="line">const handleClose = (key: string, keyPath: string[]) =&gt; &#123;</span><br><span class="line">  console.log(key, keyPath)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>把span&#x3D;12改成span&#x3D;24，侧边栏span&#x3D;24表示占满 el-col :span&#x3D;”24”表示竖直方向占满<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298169039-6bf73205-5c61-4b50-b56b-518fa680bfea.png#averageHue=%23232221&clientId=uc4d5c055-4805-4&from=paste&height=281&id=u8c61a322&originHeight=281&originWidth=497&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20001&status=done&style=none&taskId=u2b7d4666-a4bc-4b3f-89fa-b58fef5d380&title=&width=497" alt="img"></li>
-<li>在侧边栏导入图标，复制代码在对应的用户管理，权限管理，商品管理，订单管理语句各自的前一行。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478133938-4a3a0f16-2685-47d7-b5fc-2fa4e3f3f26c.png#averageHue=%23fefefe&clientId=u686843c6-6f86-4&from=paste&height=355&id=u035a8ae0&originHeight=355&originWidth=625&originalType=binary&ratio=1&rotation=0&showTitle=false&size=889370&status=done&style=none&taskId=u2566e7ca-593a-4425-b6be-c8667a1be0d&title=&width=625" alt="img"><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702298662954-37b0eb22-a73f-4b8f-badd-6a21f1a55a4b.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=333&id=u40d34559&originHeight=364&originWidth=581&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29637&status=done&style=none&taskId=u91f17d98-dc0b-494f-915e-424c2eae517&title=&width=532" alt="img"></li>
-</ol>
-<h2 id="二-在el-header设置阴影，圆角边框"><a href="#二-在el-header设置阴影，圆角边框" class="headerlink" title="二.在el-header设置阴影，圆角边框"></a>二.在el-header设置阴影，圆角边框</h2><ol>
-<li>在el-header中创建styled-box1类。（在style创建styled-box1样式）<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299037715-c342f095-d463-419a-98bf-1b325dcfdd94.png#averageHue=%23212120&clientId=uc4d5c055-4805-4&from=paste&height=114&id=udeab474a&originHeight=114&originWidth=364&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5367&status=done&style=none&taskId=u5c456bbd-ab73-4e77-908f-be0e33acb74&title=&width=364" alt="img"> </li>
-<li>CTRL+S保存，在终端输入npm run dev, 结果如下图<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702299408016-718c337f-2f6d-4c53-8f5f-db3ee347fe6f.png#averageHue=%23f0efee&clientId=uc4d5c055-4805-4&from=paste&height=109&id=ue2ca1ccb&originHeight=109&originWidth=1146&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14217&status=done&style=none&taskId=u01b9a51e-c2a4-4e0b-b481-6f4f80d0065&title=&width=1146" alt="img"></li>
-<li>引入搜索框input和搜索，添加用户两个按钮，注意el-row是行，el-col是列。</li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">            &lt;el-col :span=&quot;4&quot;</span><br><span class="line">              &gt;&lt;el-input v-model=&quot;input&quot; placeholder=&quot;请输入搜索内容&quot;</span><br><span class="line">            /&gt;&lt;/el-col&gt;</span><br><span class="line">            &lt;el-col :span=&quot;2&quot;&gt;&lt;el-button type=&quot;success&quot;&gt;搜索&lt;/el-button&gt;&lt;/el-col&gt;</span><br><span class="line">            &lt;el-col :span=&quot;2&quot;&gt;   &lt;el-button type=&quot;success&quot;&gt;添加用户&lt;/el-button&gt;&lt;/el-col&gt;</span><br><span class="line">          &lt;/el-row&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702300021651-558624ba-d852-43da-aa59-4fad9e072223.png#averageHue=%23f6f6f5&clientId=uc4d5c055-4805-4&from=paste&height=84&id=u80b84abe&originHeight=84&originWidth=848&originalType=binary&ratio=1&rotation=0&showTitle=false&size=4934&status=done&style=none&taskId=uacf1c606-6e69-4cbb-8158-b7c56adbf30&title=&width=848" alt="img"></p>
-<h2 id="三-引入表格和分页"><a href="#三-引入表格和分页" class="headerlink" title="三.引入表格和分页"></a>三.引入表格和分页</h2><ol>
-<li>找到表格，复制代码引入app.vue<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478209116-41c089fd-0661-4edf-a77a-0c4c56681425.png#averageHue=%23cdd2b5&clientId=u686843c6-6f86-4&from=paste&height=268&id=u695eafbd&originHeight=268&originWidth=465&originalType=binary&ratio=1&rotation=0&showTitle=false&size=499627&status=done&style=none&taskId=udd86a0b5-fd57-4a7b-9534-f7f5805da3f&title=&width=465" alt="img"></li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-table :data=&quot;tableData&quot; style=&quot;width: 100%&quot;&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;date&quot; label=&quot;Date&quot; width=&quot;180&quot; /&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;name&quot; label=&quot;Name&quot; width=&quot;180&quot; /&gt;</span><br><span class="line">    &lt;el-table-column prop=&quot;address&quot; label=&quot;Address&quot; /&gt;</span><br><span class="line">  &lt;/el-table&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span><br><span class="line">const tableData = [</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-03&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-02&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-04&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    date: &#x27;2016-05-01&#x27;,</span><br><span class="line">    name: &#x27;Tom&#x27;,</span><br><span class="line">    address: &#x27;No. 189, Grove St, Los Angeles&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">]</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>找到分页，引入分页<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478241936-99f04e0f-0a46-45ea-8cec-2849c886f97f.png#averageHue=%23cacfaf&clientId=u686843c6-6f86-4&from=paste&height=170&id=u560714ea&originHeight=170&originWidth=421&originalType=binary&ratio=1&rotation=0&showTitle=false&size=286987&status=done&style=none&taskId=ud68ebdbf-cf96-4c3d-946c-486ce2fb408&title=&width=421" alt="img"></li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-pagination</span><br><span class="line">    :page-size=&quot;20&quot;</span><br><span class="line">    :pager-count=&quot;11&quot;</span><br><span class="line">    layout=&quot;prev, pager, next&quot;</span><br><span class="line">    :total=&quot;1000&quot;</span><br><span class="line">  /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>刷新浏览器页面，最终的页面如下：</li>
-</ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702478272976-d56c923e-07ad-4c65-a0c9-0ca9a971be3a.png#averageHue=%23bccc96&clientId=u686843c6-6f86-4&from=paste&height=260&id=ua789d877&originHeight=260&originWidth=474&originalType=binary&ratio=1&rotation=0&showTitle=false&size=494099&status=done&style=none&taskId=uea6ed4cd-01e2-4472-8634-303e30ce7df&title=&width=474" alt="img"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-PHP后端知识点" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/17/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/">PHP后端知识点</a>
+    <h1 class="article-title" itemprop="name">
+      PHP后端知识点
     </h1>
   
 
@@ -217,6 +103,10 @@
     
     
   </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
   
 
   <div class="article-inner">
@@ -389,521 +279,56 @@
       
     </div>
     
+      <footer class="article-footer">
+        完
+      </footer>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            vue写网页
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/17/postman%E3%80%81phpstuady%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">postman、phpstuady安装</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
   
   
 </article>
-
-  
-    <article id="post-postman、phpstuady安装" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/17/postman%E3%80%81phpstuady%E5%AE%89%E8%A3%85/">postman、phpstuady安装</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/17/postman%E3%80%81phpstuady%E5%AE%89%E8%A3%85/" class="article-date">
-  <time datetime="2023-12-17T03:18:08.000Z" itemprop="datePublished">2023-12-17</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="一-postman安装"><a href="#一-postman安装" class="headerlink" title="一. postman安装"></a>一. postman安装</h3><ol>
-<li>由于数据绑定，数据交互在这个阶段不适合去学习，就直接转到了后端学习。下载安装postman,Postman是一款常用的API测试工具，它提供了一个用户友好的界面，可以帮助开发人员更加方便地发送HTTP请求并查看响应结果，以便于测试和调试API接口。链接：<a target="_blank" rel="noopener" href="https://www.postman.com/![img](https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385016305-e10bd786-5e2c-477c-a526-b7d92375dd53.png#averageHue=%23fcfbfb&clientId=ua7553f89-ffde-4&from=paste&height=341&id=ub1edfadb&originHeight=807&originWidth=1296&originalType=binary&ratio=1&rotation=0&showTitle=false&size=94706&status=done&style=none&taskId=ub243ff82-64b1-4196-8812-87d353f3a13&title=&width=547)">https://www.postman.com/![img](https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385016305-e10bd786-5e2c-477c-a526-b7d92375dd53.png#averageHue=%23fcfbfb&amp;clientId=ua7553f89-ffde-4&amp;from=paste&amp;height=341&amp;id=ub1edfadb&amp;originHeight=807&amp;originWidth=1296&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=94706&amp;status=done&amp;style=none&amp;taskId=ub243ff82-64b1-4196-8812-87d353f3a13&amp;title=&amp;width=547)</a></li>
-</ol>
-<h3 id="二-phpstudy安装"><a href="#二-phpstudy安装" class="headerlink" title="二. phpstudy安装"></a>二. phpstudy安装</h3><ol>
-<li>下载phpstudy,链接：<a target="_blank" rel="noopener" href="https://www.xp.cn/">https://www.xp.cn/</a> 然后把这个软件复制到虚拟机win10hei，最后安装<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385661733-fc4fe7dd-d851-4628-a60b-2ff1fb41a7c6.png#averageHue=%23b6e6dd&clientId=ua7553f89-ffde-4&from=paste&height=371&id=u593f0509&originHeight=545&originWidth=605&originalType=binary&ratio=1&rotation=0&showTitle=false&size=51566&status=done&style=none&taskId=u49c1cf00-60ba-45b7-ae95-d1715cba92b&title=&width=412" alt="img"></li>
-<li>开启Apache2.4.39和MySQL5.7.26<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702385948034-25cd2416-0be3-4eb0-9103-8fb67083714b.png#averageHue=%23e5c696&clientId=ua7553f89-ffde-4&from=paste&height=379&id=u8096fcb8&originHeight=637&originWidth=802&originalType=binary&ratio=1&rotation=0&showTitle=false&size=47231&status=done&style=none&taskId=uf1b17410-2405-4485-a3ac-0a6b78e23f5&title=&width=477" alt="img"></li>
-<li>点击网站，再点击高级设置，开启目录索引。<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386176329-034e71fa-1b83-4c4c-b60d-26d057f4e760.png#averageHue=%23e7cb9f&clientId=ua7553f89-ffde-4&from=paste&height=337&id=ude3785bc&originHeight=645&originWidth=824&originalType=binary&ratio=1&rotation=0&showTitle=false&size=55473&status=done&style=none&taskId=u365f036a-dd09-4cfb-a0d3-413ed83b7c1&title=&width=430" alt="img"></li>
-<li>点击管理，打开根目录，删除第二张图下的四个文件<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386312283-2213bc21-fca1-4727-a0e9-d3d0e1760cdc.png#averageHue=%23e8d3b1&clientId=ua7553f89-ffde-4&from=paste&height=333&id=u6603bec9&originHeight=629&originWidth=815&originalType=binary&ratio=1&rotation=0&showTitle=false&size=55357&status=done&style=none&taskId=u7f84eb7a-28a2-4946-8c1e-41501d91a4c&title=&width=431" alt="img"><img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702386266153-327832f2-e12b-44ba-8feb-4f1e1a15986f.png#averageHue=%23fdfdfc&clientId=ua7553f89-ffde-4&from=paste&height=236&id=u29d1d840&originHeight=589&originWidth=1121&originalType=binary&ratio=1&rotation=0&showTitle=false&size=35022&status=done&style=none&taskId=ubdaaed14-4c76-4c68-a0d8-9eefbbe5e3f&title=&width=449" alt="img"></li>
-<li>在物理机创建一个文本文档并重命名为Index.php,用vscode打开，输入以下代码并保存</li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;123&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></div>
-
-
-
-<ol>
-<li>把这个文件复制到phpstudy的根目录下，然后打开网站（<strong>注意：apache只能在根目录下解析</strong>）<img src="https://cdn.nlark.com/yuque/0/2023/png/40675946/1702387512170-a4d0ef7a-b8c9-413b-9813-8cbae5ec70d5.png#averageHue=%23fbfbfb&clientId=ua7553f89-ffde-4&from=paste&height=327&id=ufb1c0c6f&originHeight=537&originWidth=800&originalType=binary&ratio=1&rotation=0&showTitle=false&size=30093&status=done&style=none&taskId=u0b38130d-64c2-436b-b807-97b2a1e98ac&title=&width=487" alt="img"></li>
-</ol>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-笔记10" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E7%AC%94%E8%AE%B010/">笔记10</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/10/%E7%AC%94%E8%AE%B010/" class="article-date">
-  <time datetime="2023-12-10T01:43:32.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-笔记9" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E7%AC%94%E8%AE%B09/">笔记9</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/10/%E7%AC%94%E8%AE%B09/" class="article-date">
-  <time datetime="2023-12-10T01:43:25.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-远程控制" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/">远程控制</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/10/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/" class="article-date">
-  <time datetime="2023-12-10T01:43:18.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="一-简单的钓鱼网站的使用"><a href="#一-简单的钓鱼网站的使用" class="headerlink" title="一. 简单的钓鱼网站的使用"></a>一. 简单的钓鱼网站的使用</h3><ol>
-<li>在虚拟机kail中打开终端，然后输入命令vim &#x2F;etc&#x2F;proxychains.conf</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527412097-594aa483-8c61-49b9-a137-d3bd6e7865be-170217690547455.png" alt="img"></p>
-<ol>
-<li>将打开的文件的最后一行改为代理IP和端口号</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701527746184-062da0ae-a54d-4105-a263-308b39404c37-170217690547457.png" alt="img"></p>
-<ol>
-<li>然后按ESC输入冒号：，再输入wq！保存并退出编辑</li>
-<li>在终端上输入proxychains4 git clone <a target="_blank" rel="noopener" href="https://github.com/makdosx/mip22">https://github.com/makdosx/mip22</a></li>
-<li>输入cd mip22</li>
-<li>输入chmod +x .&#x2F;*</li>
-<li>输入proxychains4 -q bash .&#x2F;mip22.sh，然后会出现以下界面</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530491361-6769e2f6-174f-45ad-9336-95226ffd9468-170217690547459.png" alt="img"></p>
-<ol>
-<li>输入1</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530559088-7241b0f9-7135-4bc6-b754-4838d0920ce4-170217690547461.png" alt="img"></p>
-<ol>
-<li>选择一个钓鱼内容，例如输入66</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701530907368-981c7c6b-45b7-4a19-be91-5682601bb828-170217690547563.png" alt="img"></p>
-<ol>
-<li>输入3，等待加载成功</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531050646-0f6ad688-b881-4974-a75c-669cd704e8ef-170217690547565.png" alt="img"></p>
-<ol>
-<li>可以得到三个url，选择https的url，复制用浏览器打开，可以得到一个steam登录的钓鱼页面</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531481428-8f719548-6ff4-43d0-9890-591f461176e6-170217690547567.png" alt="img"></p>
-<ol>
-<li>可以得到登录的账号密码</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531528339-d4d7c8df-6730-4815-ad6e-080b636ea4ae-170217690547569.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701531553130-033bdeb9-b72f-4ea7-ad3a-439fb98fd316-170217690547671.png" alt="img"></p>
-<h3 id="二-HTTP动态码的获取"><a href="#二-HTTP动态码的获取" class="headerlink" title="二. HTTP动态码的获取"></a>二. HTTP动态码的获取</h3><ol>
-<li>下载VScode<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
-<li>在VScode的扩展商店里面搜索python，并安装</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701691595844-9736d0cf-3531-4cf0-a7ff-75e292c0b445-170217690547673.png" alt="img"></p>
-<ol>
-<li>在VScode的扩展商店里面搜索code run，安装第一个</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701691785996-26857469-00c9-41cd-a7e8-6fa5b9516126-170217690547875.png" alt="img"></p>
-<ol>
-<li>新建一个python类型的文件，输入代码</li>
-</ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&quot;https://httpbin.org/get&quot;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line"><span class="built_in">print</span>(r.status_code)</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>将输入的python的代码保存在已经安装好的python目录下</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701692472708-21d68ef1-56be-428b-a8a3-19e4dec55e33-170217690547977.png" alt="img"></p>
-<ol>
-<li>在路径栏中输入cmd，打开</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701692524074-7d283c7c-205d-4a86-9a2c-442c1cee75a7-170217690547979.png" alt="img"></p>
-<ol>
-<li>输入python 1.py</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170747051-a383fea0-6d8f-473c-9dbf-34fdb4c01492-170217690547981.png" alt="img"></p>
-<ol>
-<li>出现报错，根据报错信息下载插件，输入pip install requests -i <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a> –trusted-host mirrors.aliyun.com</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170851925-c9a0feb6-b8e1-4e43-8452-bcff8c4dfada-170217690548183.png" alt="img"> </p>
-<ol>
-<li>再次输入python 1.py进行尝试，看是否还缺少插件</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170918247-c81c08dc-2aff-431c-a08c-b2c1abef7c95-170217690548185.png" alt="img"></p>
-<ol>
-<li>再次出现报错，根据报错信息安装插件，输入pip install chardet -i <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a> –trusted-host mirrors.aliyun.com</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701170994659-9f1fd45b-1731-4b67-a5b9-94640bf72284-170217690548287.png" alt="img"></p>
-<ol>
-<li>再次输入python 1.py进行尝试，可以发现成功获取动态码</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701171049744-1454bc09-aa00-4bdd-b04a-d7dd1a0a44bb-170217690548289.png" alt="img"></p>
-<h3 id="三-大灰狼的使用"><a href="#三-大灰狼的使用" class="headerlink" title="三. 大灰狼的使用"></a>三. 大灰狼的使用</h3><ol>
-<li>关闭物理机和win10虚拟机的防病毒和防火墙，下载大灰狼，运行</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696354112-b954eabb-0b31-4d42-a3ee-ee704fd98d74-170217690548291.png" alt="img"></p>
-<ol>
-<li>点击服务生成</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696397078-43dc3375-9a52-4142-8fd0-1162b31df893-170217690548293.png" alt="img"></p>
-<ol>
-<li>将域名ip改为自己的本机ip，然后点击生成服务</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696424064-af54f4e5-5828-4a54-b9fd-1b5343b9adc9-170217690548295.png" alt="img"></p>
-<ol>
-<li>生成一个后缀为.exe的可执行文件，将文件拖入win10虚拟机中，在win10虚拟机上双击执行，然后就可以用大灰狼对虚拟机进行远程操作了。</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696451129-6ae84ca1-6e72-4e84-a334-b7a2cd8934ad-170217690548297.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696467627-368f2bc5-7321-401a-a19d-7440aa3d857e-170217690548299.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696628655-8e59c39a-f661-4d60-ac6f-7d196c6108c2-1702176905482101.png" alt="img"></p>
-<ol>
-<li>右击已连接的虚拟机，可以对win10虚拟机进行远程控制，键盘记录等</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701696909209-6b5255ae-b5c9-4dd1-8b36-e3bff58e1bbd-1702176905482103.png" alt="img"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-CentOs bash脚本安装+HTML" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/">CentOs bash脚本安装+HTML</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/10/CentOs%20bash%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85+HTML/" class="article-date">
-  <time datetime="2023-12-10T01:43:12.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-网络基础知识+proxifier的设置+wireshark抓包" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/">网络基础知识+proxifier的设置+wireshark抓包</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85/" class="article-date">
-  <time datetime="2023-12-10T01:43:04.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="一-网络基础知识"><a href="#一-网络基础知识" class="headerlink" title="一. 网络基础知识"></a>一. 网络基础知识</h3><ol>
-<li>以太网适配器：网线接口；Virtualbox：虚拟网络</li>
-<li>以太网4</li>
-</ol>
-<p>​       VMware Network：虚拟机网络以及网关</p>
-<p>​       无线局域网适配器 WLAN：常规ip地址</p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783280804-f9385f31-91d8-4d9a-967b-3c31049c97c7.png" alt="img"></p>
-<ol>
-<li><strong>三个私网网段</strong></li>
-</ol>
-<p><strong>A类:10.0.0.0 - 10.255.255.255</strong></p>
-<p><strong>B类:172.16.0.0-173.31.255.255</strong></p>
-<p><strong>C类:192.168.0.0-192.168.255.255</strong></p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783385443-042ccad3-5abe-488a-ae35-c564d9b9b94f.png" alt="img"></p>
-<ol>
-<li>公网（外网) 私网(内网）</li>
-<li>127.0.0.1—本地回环地址；0.0.0.0    *指可连接任意IP地址</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701825136989-d9cb02ba-b1d6-4706-9f20-9dcf2ada1183.png" alt="img"></p>
-<ol>
-<li>光猫：将光纤转换为电信号</li>
-<li>ap：路由器，即内网，内网ip任何人都可以用</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783433525-bd2e190a-812a-4124-9670-691f329d60f7.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783446201-e2a14158-dee8-40b7-b161-0ef659373794.png" alt="img"></p>
-<ol>
-<li>要是内网中两个ip一样，有可能两个都能正常上网，也有可能只有一个能上网，也有可能两个都不能上网。理论上是手动设置的静态IP优先。动态路由会变换ip找到最短路径，静态则不变</li>
-</ol>
-<p><img src="/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85.assets/1701783490949-24beef04-3b9d-4562-95cb-18bb9d1fb7ec.png" alt="img"></p>
-<ol>
-<li>pc1不能连pc2，pc3；pc2，pc3可以连pc1</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783570373-cc6bf15c-57fc-488c-86a1-fcd818ce1523.png" alt="img"></p>
-<ol>
-<li>四现象（）源IP，源MAC,目的IP，目的MAC</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783623083-6972dc23-0807-419b-81ed-cc62ce8d13d5.png" alt="img"></p>
-<h3 id="二-Proxifier的设置"><a href="#二-Proxifier的设置" class="headerlink" title="二. Proxifier的设置"></a>二. Proxifier的设置</h3><ol>
-<li>下载并安装 Proxifier</li>
-<li>打开clash代理，找到自己的代理IP和端口号</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701780648417-660407f9-6755-446f-9320-8bd9ff02d209.png" alt="img"></p>
-<ol>
-<li>打开proxifier点击配置文件-&gt;代理服务器-&gt;编辑</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781362256-5dd9b395-98b7-40fc-9586-1ec7686f4425.png" alt="img"></p>
-<ol>
-<li>将端口号改为clash猫上面的端口号，协议选择SOCKS5，点击确定</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781400698-1de2107d-5425-4e3e-b1a4-18dee07086fc.png" alt="img"></p>
-<ol>
-<li>置文件-&gt;代理规则，点击添加</li>
-</ol>
-<p><img src="/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86+proxifier%E7%9A%84%E8%AE%BE%E7%BD%AE+wireshark%E6%8A%93%E5%8C%85.assets/1701781416248-d25decd1-7970-4d67-b6e6-c95ff9855940.png" alt="img"></p>
-<ol>
-<li>用程序输入ssh*;（分号为英文输入） ,动作选择第一个，点击确定，给localhost规则移除</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781428770-31ff90c0-cd5c-45f9-90f0-ac9b6617f48f.png" alt="img"></p>
-<ol>
-<li>default选择direct（直接放行）</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781485906-a8637952-cb2e-4291-b883-c589f5ba3c42.png" alt="img"></p>
-<ol>
-<li>配置文件-&gt;名称解析</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781510245-3503e8b7-6911-484a-aeb6-87bcf0b97d52.png" alt="img"></p>
-<ol>
-<li>将设置改为下图所示，这样proxifier就配置好了</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781523337-f9ce8e70-1c64-474e-bf48-e50003534930.png" alt="img"></p>
-<h3 id="三-wireshark的使用"><a href="#三-wireshark的使用" class="headerlink" title="三. wireshark的使用"></a>三. wireshark的使用</h3><ol>
-<li>下载并安装wireshark <a target="_blank" rel="noopener" href="https://www.wireshark.org/">https://www.wireshark.org/</a></li>
-<li>安装时能勾选的东西全部勾选</li>
-<li>双击WLAN，就可以抓获WLAN的包</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781799027-2e5f7d4b-24dc-4e9d-b6c4-cbfec909043a.png" alt="img"></p>
-<ol>
-<li>点击停止</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701781903276-7eeda298-8f3d-4bf6-9186-901ec156a7c3.png" alt="img"></p>
-<ol>
-<li>可以搜索tcp、udp、http等协议；【ip.src &#x3D;&#x3D; 源ip   源IP过滤】；【ip.dst &#x3D;&#x3D; 目的IP   目的ip过滤】</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701782033081-06a55d14-66f1-4e01-8ddf-09241b7ba717.png" alt="img"></p>
-<ol>
-<li>抓获ping命令的包，打开cmd输入ping baidu.com，回wireshark搜索icmp</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701782915590-dbd0ad5b-3950-4496-889b-bc1a22d39030.png" alt="img"><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701783080675-79c8e522-f209-4a22-9a40-6cda6533562f.png" alt="img"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-安卓病毒监听" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/10/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC/">安卓病毒监听</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/10/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC/" class="article-date">
-  <time datetime="2023-12-10T01:42:57.000Z" itemprop="datePublished">2023-12-10</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="一-正向shell和反向（反弹shell）"><a href="#一-正向shell和反向（反弹shell）" class="headerlink" title="一. 正向shell和反向（反弹shell）"></a>一. 正向shell和反向（反弹shell）</h3><p>\1. s&#x3D;服务器，c&#x3D;客户端</p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701658783381-411a5020-d77d-43bd-82c1-ea8af0947f45.png" alt="img"></p>
-<ol>
-<li>正向shell</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660637050-d71c410c-3e1f-4ba9-8ab1-09a5ca3c476f.png" alt="img"></p>
-<ol>
-<li>反向（反弹）shell</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660673228-839bd74c-4eb0-4457-8597-aef589c847ac.png" alt="img"><img src="/%E5%AE%89%E5%8D%93%E7%97%85%E6%AF%92%E7%9B%91%E5%90%AC.assets/1701660673235-2d522d4f-a299-4c89-804d-71c256a30eb1.png">服务器端口一般是0000 (0000表示不限制任何ip；)，</p>
-<p>正向shell可能会出现bug，会有window或者Linux的防火墙抵御来自sever的监听。</p>
-<p>但是反向shell不会，因为反向shell是客户机c出栈，正向shell是入栈。</p>
-<ol>
-<li>解决防火墙抵御bug的解决方法,直接关闭防火墙或者在防火墙高级设置中允许连接</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701660841045-3bf53bc2-b418-4812-9766-42d9d3246b29.png" alt="img"></p>
-<h3 id="二-使用mumu进行病毒监听"><a href="#二-使用mumu进行病毒监听" class="headerlink" title="二. 使用mumu进行病毒监听"></a>二. 使用mumu进行病毒监听</h3><ol>
-<li>在官网上下载mumu模拟器版本，下载mumu6</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://mumu.163.com/index.html">https://mumu.163.com/index.html</a></p>
-<ol>
-<li>安装好AhMyth程序</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774342011-c32f002c-002c-4b6a-8ac6-b695d8f855c3.png" alt="img"></p>
-<ol>
-<li>win+r,输入cmd，输入ipconfig查找自己的ip</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774524388-d4ddda1f-ae25-460e-a00c-cee86acbfb75.png" alt="img"></p>
-<ol>
-<li>打开AhMyth，在Source IP中输入刚刚获取到的ip，端口号默认即可，然后点击Build</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701774570641-4bf0d95c-bcf6-4b70-a2df-432ca4cf0b9e.png" alt="img"></p>
-<h3 id="三-java的安装和环境配置"><a href="#三-java的安装和环境配置" class="headerlink" title="三. java的安装和环境配置"></a>三. java的安装和环境配置</h3><ol>
-<li>下载Java安装包</li>
-<li>新建两个文件夹，分别命名为java8和java_jre</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775640674-1ccfaaf8-1113-4623-ada6-f339b5dca481.png" alt="img"></p>
-<ol>
-<li>点击安装，将目录更换到java8文件夹下（由于我是在虚拟机安装没有其它盘，只能装在c盘），然后点击下一步</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775669701-e5cd5370-2332-4f31-a8fd-5dc8f6b9f92a.png" alt="img"></p>
-<ol>
-<li>将目标文件夹的路径更换到java_jre文件夹中，然后下一步</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701775713940-4b4601fa-2ff9-4175-bfbc-aedad10ee912.png" alt="img">5.右击此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量，</p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701690778669-e54569a8-4e63-447a-b5f0-d8e560198c60.png" alt="img"></p>
-<p>6.找到系统变量的Path变量，双击打开</p>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776040782-8644d8ac-8f81-4e08-804b-1759245d644f.png" alt="img"></p>
-<ol>
-<li>将新建的两个文件夹的路径加进去，然后确定，这样java环境就配置好了</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/xiatongzhuojiu/888/main/img/1701776102197-f0412dbd-8006-4cb9-b325-9aafeacd359e.png" alt="img"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-  </nav>
-
-
 </section>
         <aside id="sidebar">
   

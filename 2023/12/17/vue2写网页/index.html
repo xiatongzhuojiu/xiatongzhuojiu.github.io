@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>vue2写网页 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="一. 从element引入按钮 访问element zn-cn官网，链接：https:&#x2F;&#x2F;element.eleme.cn&#x2F;#&#x2F;zh-CN&#x2F;component&#x2F;installation 引入样式和组件库 2.在左侧的菜单栏的安装，复制以下代码，在vscode中新建index.php文件，粘贴到index.php文件  1234567891011121314151617&lt;link rel&#x3D;&amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue2写网页">
+<meta property="og:url" content="http://example.com/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一. 从element引入按钮 访问element zn-cn官网，链接：https:&#x2F;&#x2F;element.eleme.cn&#x2F;#&#x2F;zh-CN&#x2F;component&#x2F;installation 引入样式和组件库 2.在左侧的菜单栏的安装，复制以下代码，在vscode中新建index.php文件，粘贴到index.php文件  1234567891011121314151617&lt;link rel&#x3D;&amp;q">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782810414-f099849d-6cbc-4637-bfa2-0a07acca9b7b.png">
+<meta property="og:image" content="http://example.com/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782827520-44310496-e52f-4df4-82b3-bbd72ca0a6e4.png">
+<meta property="article:published_time" content="2023-12-17T03:21:12.000Z">
+<meta property="article:modified_time" content="2023-12-17T03:26:03.904Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782810414-f099849d-6cbc-4637-bfa2-0a07acca9b7b.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-vue2写网页" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      vue2写网页
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/" class="article-date">
+  <time datetime="2023-12-17T03:21:12.000Z" itemprop="datePublished">2023-12-17</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="一-从element引入按钮"><a href="#一-从element引入按钮" class="headerlink" title="一. 从element引入按钮"></a>一. 从element引入按钮</h3><ol>
+<li>访问element zn-cn官网，链接：<a target="_blank" rel="noopener" href="https://element.eleme.cn/#/zh-CN/component/installation">https://element.eleme.cn/#/zh-CN/component/installation</a> 引入样式和组件库</li>
+<li>2.在左侧的菜单栏的安装，复制以下代码，在vscode中新建index.php文件，粘贴到index.php文件</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&quot;&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;                              //3,4行是body中的内容</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!-- import Vue before Element --&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;!-- import JavaScript --&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/element-ui/lib/index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: &#x27;#app&#x27;,</span><br><span class="line">      data: function() &#123;</span><br><span class="line">        return &#123; visible: false &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>在左侧的菜单栏找到button按钮，复制一个蓝色按钮的代码，粘贴到<div id="app"></div>中。复制以下三个链接在浏览器打开，然后复制代码，新建index.css vue.js index.js，把代码对应粘贴到这三个文件，引入样式和组件库 。</li>
+</ol>
+<p>a. <a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">https://unpkg.com/element-ui/lib/theme-chalk/index.css</a></p>
+<p>b. <a target="_blank" rel="noopener" href="https://unpkg.com/vue@2/dist/vue.js">https://unpkg.com/vue@2/dist/vue.js</a></p>
+<p>c. <a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/index.js">https://unpkg.com/element-ui/lib/index.js</a></p>
+<p>3.<a target="_blank" rel="noopener" href="https://unpkg.com/element-ui/lib/index.js">https://unpkg.com/element-ui/lib/index.js</a></p>
+<p><img src="/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782810414-f099849d-6cbc-4637-bfa2-0a07acca9b7b.png" alt="img"></p>
+<ol>
+<li>右击index.php,在文件管理器中显示，复制上图四个文件，粘贴到虚拟机win10hei的PHPstudy的根目录下，ctrl+s保存，在phpstudy中打开网站，出现按钮。</li>
+</ol>
+<p><img src="/vue2%E5%86%99%E7%BD%91%E9%A1%B5.assets/1702782827520-44310496-e52f-4df4-82b3-bbd72ca0a6e4.png" alt="img"></p>
+<h3 id="二-制作网站"><a href="#二-制作网站" class="headerlink" title="二. 制作网站"></a>二. 制作网站</h3>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">vue写网页</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        一路烟霞
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/17/vue2%E5%86%99%E7%BD%91%E9%A1%B5/">vue2写网页</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/vue%E5%86%99%E7%BD%91%E9%A1%B5/">vue写网页</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/PHP%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/">PHP后端知识点</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/17/postman%E3%80%81phpstuady%E5%AE%89%E8%A3%85/">postman、phpstuady安装</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/10/%E7%AC%94%E8%AE%B010/">笔记10</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2023 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
